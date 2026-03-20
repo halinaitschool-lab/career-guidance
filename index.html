@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Профориентация для подростков | Вероника</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --coral: #E8614A;
+    --coral-light: #F28B76;
+    --coral-pale: #FDE8E4;
+    --green: #3D7A5F;
+    --green-light: #5BA080;
+    --green-pale: #E4F2EC;
+    --gold: #C9973A;
+    --gold-light: #E4B85A;
+    --gold-pale: #FDF4E3;
+    --cream: #FDFAF5;
+    --dark: #1C2B26;
+    --text: #2D3E38;
+    --muted: #6B7E78;
+    --white: #FFFFFF;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1.2;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(253,250,245,0.95);
+    backdrop-filter: blur(12px);
+    padding: 14px 20px;
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid rgba(201,151,58,0.15);
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; font-weight: 700;
+    color: var(--green);
+  }
+  .nav-logo span { color: var(--coral); }
+  .nav-cta {
+    background: var(--coral);
+    color: white; border: none;
+    padding: 10px 20px; border-radius: 50px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.85rem; font-weight: 700;
+    cursor: pointer; text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+    display: inline-block;
+  }
+  .nav-cta:hover { background: var(--coral-light); transform: translateY(-1px); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100svh;
+    background: linear-gradient(160deg, var(--dark) 0%, #2A4A3A 60%, #1C3028 100%);
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: flex-start;
+    padding: 100px 24px 60px;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 80% 40%, rgba(232,97,74,0.18) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 50% at 10% 80%, rgba(201,151,58,0.12) 0%, transparent 60%);
+  }
+  .hero-badge {
+    background: rgba(201,151,58,0.2);
+    border: 1px solid rgba(201,151,58,0.4);
+    color: var(--gold-light);
+    padding: 6px 16px; border-radius: 50px;
+    font-size: 0.8rem; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    margin-bottom: 24px;
+    position: relative; z-index: 1;
+  }
+  .hero h1 {
+    font-size: clamp(2.4rem, 9vw, 4.5rem);
+    color: white; font-weight: 700;
+    margin-bottom: 20px;
+    position: relative; z-index: 1;
+    max-width: 600px;
+  }
+  .hero h1 em {
+    font-style: italic; color: var(--coral-light);
+  }
+  .hero-sub {
+    font-size: clamp(1rem, 3.5vw, 1.2rem);
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 36px;
+    max-width: 480px;
+    position: relative; z-index: 1;
+  }
+  .hero-sub strong { color: rgba(255,255,255,0.95); }
+  .hero-btns {
+    display: flex; flex-direction: column; gap: 12px;
+    position: relative; z-index: 1;
+    width: 100%;
+  }
+  .btn-primary {
+    background: var(--coral);
+    color: white; border: none;
+    padding: 16px 28px; border-radius: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.05rem; font-weight: 800;
+    cursor: pointer; text-decoration: none;
+    transition: all 0.2s;
+    display: inline-block; text-align: center;
+  }
+  .btn-primary:hover { background: var(--coral-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(232,97,74,0.35); }
+  .btn-secondary {
+    background: transparent;
+    color: rgba(255,255,255,0.85);
+    border: 1.5px solid rgba(255,255,255,0.3);
+    padding: 15px 28px; border-radius: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem; font-weight: 700;
+    cursor: pointer; text-decoration: none;
+    transition: all 0.2s;
+    display: inline-block; text-align: center;
+  }
+  .btn-secondary:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.08); }
+  .hero-decor {
+    position: absolute; right: -40px; top: 50%;
+    transform: translateY(-50%);
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,151,58,0.15) 0%, transparent 70%);
+    border: 1px solid rgba(201,151,58,0.1);
+    z-index: 0;
+  }
+
+  /* ── TRUST STRIP ── */
+  .trust-strip {
+    background: var(--gold-pale);
+    border-top: 2px solid rgba(201,151,58,0.2);
+    border-bottom: 2px solid rgba(201,151,58,0.2);
+    padding: 20px 24px;
+    display: flex; gap: 24px;
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .trust-strip::-webkit-scrollbar { display: none; }
+  .trust-item {
+    display: flex; align-items: center; gap: 8px;
+    white-space: nowrap; flex-shrink: 0;
+    font-size: 0.9rem; font-weight: 600;
+    color: var(--gold);
+  }
+  .trust-icon { font-size: 1.2rem; }
+
+  /* ── SECTION SHARED ── */
+  section { padding: 72px 24px; }
+  .section-label {
+    font-size: 0.75rem; font-weight: 800;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--coral); margin-bottom: 12px;
+  }
+  .section-title {
+    font-size: clamp(2rem, 7vw, 3rem);
+    color: var(--dark); margin-bottom: 16px;
+  }
+  .section-sub {
+    font-size: 1.05rem; color: var(--muted);
+    max-width: 540px; line-height: 1.7;
+  }
+
+  /* ── WHO IS THIS FOR ── */
+  .who-section { background: white; }
+  .who-tabs {
+    display: flex; gap: 8px;
+    margin: 32px 0 24px;
+    background: var(--cream);
+    padding: 6px; border-radius: 16px;
+  }
+  .who-tab {
+    flex: 1; padding: 12px 16px;
+    border: none; border-radius: 12px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9rem; font-weight: 700;
+    cursor: pointer; transition: all 0.25s;
+    background: transparent; color: var(--muted);
+  }
+  .who-tab.active {
+    background: var(--green);
+    color: white;
+    box-shadow: 0 4px 12px rgba(61,122,95,0.25);
+  }
+  .who-content { display: none; animation: fadeIn 0.3s ease; }
+  .who-content.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  .who-card {
+    background: var(--green-pale);
+    border-radius: 20px; padding: 28px;
+    border-left: 4px solid var(--green);
+  }
+  .who-card p {
+    font-size: 1rem; line-height: 1.8;
+    color: var(--text);
+  }
+  .who-card strong { color: var(--green); }
+  .who-card-adult {
+    background: var(--coral-pale);
+    border-left-color: var(--coral);
+  }
+  .who-card-adult strong { color: var(--coral); }
+
+  /* ── PROMISE / FORMULA ── */
+  .promise-section {
+    background: linear-gradient(135deg, var(--dark) 0%, #1A3530 100%);
+    position: relative; overflow: hidden;
+  }
+  .promise-section::before {
+    content: '';
+    position: absolute; top: -100px; right: -80px;
+    width: 350px; height: 350px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(232,97,74,0.12) 0%, transparent 70%);
+  }
+  .promise-section .section-label { color: var(--gold-light); }
+  .promise-section .section-title { color: white; }
+  .promise-grid {
+    display: grid; gap: 16px; margin-top: 40px;
+  }
+  .promise-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px; padding: 28px;
+    position: relative; overflow: hidden;
+    transition: transform 0.2s, background 0.2s;
+  }
+  .promise-card:hover { transform: translateY(-3px); background: rgba(255,255,255,0.08); }
+  .promise-icon {
+    font-size: 2rem; margin-bottom: 16px;
+  }
+  .promise-card h3 {
+    font-size: 1.3rem; color: white;
+    margin-bottom: 10px;
+  }
+  .promise-card p { font-size: 0.95rem; color: rgba(255,255,255,0.65); line-height: 1.7; }
+  .promise-card .badge {
+    position: absolute; top: 20px; right: 20px;
+    background: var(--coral);
+    color: white; font-size: 0.7rem; font-weight: 800;
+    padding: 4px 10px; border-radius: 50px;
+    text-transform: uppercase; letter-spacing: 0.05em;
+  }
+
+  /* ── CHECKLIST ── */
+  .checklist-section { background: var(--gold-pale); }
+  .checklist-intro {
+    font-size: 1.1rem; color: var(--text);
+    margin: 16px 0 32px; line-height: 1.7;
+  }
+  .checklist-steps {
+    display: flex; flex-direction: column; gap: 16px;
+  }
+  .checklist-step {
+    background: white; border-radius: 18px;
+    padding: 22px; display: flex; gap: 18px; align-items: flex-start;
+    border: 1px solid rgba(201,151,58,0.15);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: default;
+  }
+  .checklist-step:hover { transform: translateX(4px); box-shadow: 0 4px 20px rgba(201,151,58,0.15); }
+  .step-num {
+    min-width: 44px; height: 44px;
+    background: var(--gold);
+    color: white; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 700;
+  }
+  .step-text h4 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem; font-weight: 800;
+    color: var(--dark); margin-bottom: 4px;
+  }
+  .step-text p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+  .checklist-cta {
+    margin-top: 32px; text-align: center;
+  }
+  .result-box {
+    background: var(--green);
+    border-radius: 20px; padding: 24px;
+    margin-top: 28px; text-align: center;
+  }
+  .result-box p {
+    color: white; font-size: 1.05rem; font-weight: 600; line-height: 1.7;
+  }
+  .result-box strong { color: var(--gold-light); }
+
+  /* ── PROCESS ── */
+  .process-section { background: white; }
+  .process-steps {
+    margin-top: 36px;
+    display: flex; flex-direction: column; gap: 0;
+    position: relative;
+  }
+  .process-step {
+    display: flex; gap: 20px; align-items: flex-start;
+    padding-bottom: 36px; position: relative;
+  }
+  .process-step:not(:last-child)::before {
+    content: '';
+    position: absolute; left: 24px; top: 52px;
+    width: 2px; bottom: 0;
+    background: linear-gradient(to bottom, var(--coral), var(--coral-pale));
+  }
+  .p-num {
+    min-width: 48px; height: 48px;
+    background: var(--coral-pale);
+    border: 2px solid var(--coral);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; font-weight: 700; color: var(--coral);
+    flex-shrink: 0;
+  }
+  .p-content h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 700;
+    color: var(--dark); margin-bottom: 6px;
+  }
+  .p-content p { font-size: 0.95rem; color: var(--muted); line-height: 1.7; }
+  .p-emoji { font-size: 1.4rem; margin-bottom: 4px; display: block; }
+
+  /* ── RESULTS ── */
+  .results-section {
+    background: var(--green-pale);
+  }
+  .results-grid {
+    display: grid; gap: 16px; margin-top: 36px;
+  }
+  .result-card {
+    background: white; border-radius: 20px;
+    padding: 28px;
+    border-top: 3px solid var(--green);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+  }
+  .result-card:hover { transform: translateY(-4px); }
+  .result-card .r-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
+  .result-card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; color: var(--dark);
+    margin-bottom: 8px;
+  }
+  .result-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
+
+  /* ── REVIEWS ── */
+  .reviews-section {
+    background: linear-gradient(160deg, #1C2B26 0%, #2A4A3A 100%);
+  }
+  .reviews-section .section-label { color: var(--gold-light); }
+  .reviews-section .section-title { color: white; }
+  .reviews-grid {
+    display: flex; flex-direction: column; gap: 16px; margin-top: 36px;
+  }
+  .review-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px; padding: 28px;
+    position: relative;
+  }
+  .review-card::before {
+    content: '"';
+    position: absolute; top: 12px; right: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem; color: var(--coral); opacity: 0.3;
+    line-height: 1;
+  }
+  .review-text {
+    font-size: 0.95rem; color: rgba(255,255,255,0.82);
+    line-height: 1.75; margin-bottom: 20px; font-style: italic;
+  }
+  .review-author {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .review-avatar {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--coral), var(--gold));
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; color: white; font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  .review-name { font-size: 0.9rem; font-weight: 700; color: white; }
+  .review-role { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+  .review-stars { color: var(--gold-light); font-size: 0.9rem; margin-bottom: 4px; }
+
+  /* ── PACKAGES ── */
+  .packages-section { background: var(--cream); }
+  .packages-grid {
+    display: flex; flex-direction: column; gap: 20px; margin-top: 36px;
+  }
+  .package-card {
+    background: white; border-radius: 24px;
+    padding: 32px; border: 2px solid rgba(0,0,0,0.06);
+    position: relative; overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .package-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.1); }
+  .package-card.featured {
+    border-color: var(--coral);
+    box-shadow: 0 8px 40px rgba(232,97,74,0.15);
+  }
+  .package-card.group-card { border-color: var(--green); }
+  .featured-ribbon {
+    position: absolute; top: 20px; right: -28px;
+    background: var(--coral);
+    color: white; font-size: 0.72rem; font-weight: 800;
+    padding: 6px 40px; transform: rotate(45deg);
+    text-transform: uppercase; letter-spacing: 0.06em;
+  }
+  .package-type {
+    font-size: 0.75rem; font-weight: 800;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 8px;
+  }
+  .package-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem; color: var(--dark);
+    margin-bottom: 6px;
+  }
+  .package-price {
+    font-size: 2.2rem; font-weight: 800;
+    color: var(--coral); line-height: 1;
+    margin-bottom: 4px;
+  }
+  .package-card.group-card .package-price { color: var(--green); }
+  .price-note { font-size: 0.85rem; color: var(--muted); margin-bottom: 24px; }
+  .package-desc {
+    font-size: 0.95rem; color: var(--text);
+    line-height: 1.7; margin-bottom: 24px;
+  }
+  .package-list {
+    list-style: none; display: flex; flex-direction: column; gap: 10px;
+    margin-bottom: 28px;
+  }
+  .package-list li {
+    display: flex; gap: 10px; align-items: flex-start;
+    font-size: 0.9rem; color: var(--text); line-height: 1.5;
+  }
+  .package-list li::before {
+    content: '✓';
+    min-width: 22px; height: 22px;
+    background: var(--green-pale); color: var(--green);
+    border-radius: 50%; display: flex; align-items: center;
+    justify-content: center; font-weight: 800; font-size: 0.75rem;
+    flex-shrink: 0; margin-top: 1px;
+  }
+  .package-card.featured .package-list li::before { background: var(--coral-pale); color: var(--coral); }
+  .btn-package {
+    display: block; width: 100%;
+    padding: 16px; border-radius: 14px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem; font-weight: 800;
+    text-align: center; text-decoration: none;
+    cursor: pointer; border: none; transition: all 0.2s;
+    background: var(--green); color: white;
+  }
+  .btn-package:hover { background: var(--green-light); transform: translateY(-2px); }
+  .package-card.featured .btn-package { background: var(--coral); }
+  .package-card.featured .btn-package:hover { background: var(--coral-light); }
+  .package-card.group-card .btn-package { background: var(--green); }
+
+  /* ── FORM ── */
+  .form-section {
+    background: var(--coral);
+    position: relative; overflow: hidden;
+  }
+  .form-section::before {
+    content: '';
+    position: absolute; bottom: -100px; left: -80px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+  }
+  .form-section .section-label { color: rgba(255,255,255,0.8); }
+  .form-section .section-title { color: white; }
+  .form-section .section-sub { color: rgba(255,255,255,0.8); }
+  .contact-form {
+    background: white; border-radius: 24px;
+    padding: 32px; margin-top: 36px;
+    position: relative; z-index: 1;
+  }
+  .form-group { margin-bottom: 18px; }
+  .form-group label {
+    display: block; font-size: 0.88rem; font-weight: 700;
+    color: var(--text); margin-bottom: 6px;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%; padding: 14px 16px;
+    border: 1.5px solid rgba(0,0,0,0.1);
+    border-radius: 12px; font-family: 'Nunito', sans-serif;
+    font-size: 0.95rem; color: var(--text);
+    background: var(--cream); outline: none;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--coral); background: white; }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .btn-submit {
+    width: 100%; padding: 18px;
+    background: var(--coral); color: white; border: none;
+    border-radius: 14px; font-family: 'Nunito', sans-serif;
+    font-size: 1.05rem; font-weight: 800;
+    cursor: pointer; transition: all 0.2s;
+    margin-top: 8px;
+  }
+  .btn-submit:hover { background: #d0533c; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(232,97,74,0.35); }
+  .form-privacy {
+    text-align: center; font-size: 0.8rem;
+    color: var(--muted); margin-top: 12px;
+  }
+  .form-success {
+    display: none; text-align: center;
+    padding: 20px;
+  }
+  .form-success .success-icon { font-size: 3rem; margin-bottom: 12px; }
+  .form-success h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--green); margin-bottom: 8px; }
+  .form-success p { font-size: 0.95rem; color: var(--muted); }
+
+  /* ── TELEGRAM ── */
+  .tg-section {
+    background: var(--dark);
+    text-align: center; padding: 60px 24px;
+  }
+  .tg-section .section-title { color: white; margin-bottom: 12px; }
+  .tg-section p { color: rgba(255,255,255,0.65); margin-bottom: 28px; font-size: 1rem; }
+  .btn-tg {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #229ED9; color: white;
+    padding: 16px 32px; border-radius: 14px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem; font-weight: 800;
+    text-decoration: none; transition: all 0.2s;
+  }
+  .btn-tg:hover { background: #1a8bbf; transform: translateY(-2px); }
+  .tg-icon { font-size: 1.3rem; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #111A16; padding: 32px 24px;
+    text-align: center;
+  }
+  footer p { font-size: 0.85rem; color: rgba(255,255,255,0.35); line-height: 2; }
+  footer a { color: var(--coral-light); text-decoration: none; }
+
+  /* ── FLOATING CTA ── */
+  .float-cta {
+    position: fixed; bottom: 20px; right: 20px; z-index: 99;
+    background: var(--green);
+    color: white; border: none;
+    width: 56px; height: 56px; border-radius: 50%;
+    font-size: 1.4rem; cursor: pointer;
+    box-shadow: 0 4px 20px rgba(61,122,95,0.4);
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: pulse 3s infinite;
+  }
+  .float-cta:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(61,122,95,0.5); }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 4px 20px rgba(61,122,95,0.4); }
+    50% { box-shadow: 0 4px 28px rgba(61,122,95,0.7); }
+  }
+
+  /* ── RESPONSIVE 768+ ── */
+  @media (min-width: 768px) {
+    section { padding: 96px 48px; }
+    nav { padding: 16px 48px; }
+    .hero { padding: 120px 48px 80px; }
+    .hero-btns { flex-direction: row; width: auto; }
+    .btn-primary, .btn-secondary { width: auto; }
+    .promise-grid { grid-template-columns: 1fr 1fr; }
+    .results-grid { grid-template-columns: 1fr 1fr; }
+    .reviews-grid { display: grid; grid-template-columns: 1fr 1fr; }
+    .packages-grid { display: grid; grid-template-columns: 1fr 1fr; }
+    .package-card.group-full { grid-column: 1 / -1; max-width: 480px; margin: 0 auto; width: 100%; }
+  }
+
+  @media (min-width: 1024px) {
+    section { padding: 112px 80px; }
+    nav { padding: 18px 80px; }
+    .hero { padding: 140px 80px 100px; }
+    .promise-grid { grid-template-columns: 1fr 1fr 1fr; }
+    .results-grid { grid-template-columns: repeat(3, 1fr); }
+    .packages-grid { grid-template-columns: 1fr 1fr 1fr; }
+    .package-card.group-full { grid-column: auto; max-width: none; margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Верони<span>ка</span></div>
+  <a href="#form" class="nav-cta">Записаться →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-decor"></div>
+  <div class="hero-badge">🌿 Профориентация · Польша</div>
+  <h1>Ваш ребёнок найдёт <em>своё призвание</em> — и сам захочет учиться</h1>
+  <p class="hero-sub">
+    Помогаю подросткам и взрослым выбрать путь без паники, давления и ошибочных решений.<br>
+    <strong>Без «ты должен» — только ты сам.</strong>
+  </p>
+  <div class="hero-btns">
+    <a href="#form" class="btn-primary">Хочу консультацию →</a>
+    <a href="#packages" class="btn-secondary">Посмотреть программы</a>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-item"><span class="trust-icon">🇵🇱</span> Работаю в Польше</div>
+  <div class="trust-item"><span class="trust-icon">🧠</span> Психолог по образованию</div>
+  <div class="trust-item"><span class="trust-icon">⭐</span> Реальные результаты</div>
+  <div class="trust-item"><span class="trust-icon">👨‍👩‍👧</span> Для подростков и взрослых</div>
+  <div class="trust-item"><span class="trust-icon">✨</span> Глубокий подход</div>
+</div>
+
+<!-- WHO IS THIS FOR -->
+<section class="who-section">
+  <div class="section-label">Для кого</div>
+  <h2 class="section-title">Вы узнаёте себя?</h2>
+  <div class="who-tabs">
+    <button class="who-tab active" onclick="switchTab('teen')">👦 Для подростков</button>
+    <button class="who-tab" onclick="switchTab('adult')">👩 Для взрослых</button>
+  </div>
+
+  <div class="who-content active" id="tab-teen">
+    <div class="who-card">
+      <p>Вы — мама, которая видит, как ваш ребёнок <strong>не знает, чего хочет</strong>. Он учится, но без огня в глазах. Выпускной класс близко, и выбор специальности давит на всю семью.</p>
+      <br>
+      <p>Вы хотите помочь, но не знаете как — и боитесь навязать своё мнение. Вы мечтаете, чтобы ребёнок <strong>сам захотел учиться и знал, зачем</strong>.</p>
+      <br>
+      <p>Именно для вас — и для него — эта программа. 💛</p>
+    </div>
+  </div>
+
+  <div class="who-content" id="tab-adult">
+    <div class="who-card who-card-adult">
+      <p>Вы работаете — но чувствуете, что <strong>это не ваше</strong>. Каждое утро — как маленький подвиг. Вы мечтаете о смене, но страшно начинать с нуля после 30, 40...</p>
+      <br>
+      <p>Вы хотите найти то, что <strong>заряжает энергией</strong>, а не забирает её. И понять: это реально сделать — сменить профессию и не потерять себя.</p>
+      <br>
+      <p>Это возможно. И я покажу вам как. <strong>Вместе.</strong> 🧡</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE -->
+<section class="promise-section">
+  <div class="section-label">Что вы получите</div>
+  <h2 class="section-title">Ясность вместо тревоги</h2>
+  <p class="section-sub" style="color:rgba(255,255,255,0.65); margin-bottom:0;">
+    Представьте: ребёнок сам садится за уроки, знает куда идёт — и глаза горят.
+  </p>
+  <div class="promise-grid">
+    <div class="promise-card">
+      <div class="promise-icon">🧭</div>
+      <h3>Чёткое направление</h3>
+      <p>Вместо «не знаю» — конкретное направление, подобранное под темперамент и таланты именно вашего ребёнка.</p>
+    </div>
+    <div class="promise-card">
+      <div class="promise-icon">💪</div>
+      <h3>Внутренняя мотивация</h3>
+      <p>Ребёнок поймёт <em>свои</em> сильные стороны и начнёт сам строить планы. Без уговоров с вашей стороны.</p>
+    </div>
+    <div class="promise-card">
+      <div class="promise-icon">🗺️</div>
+      <h3>Стратегия поступления</h3>
+      <p>Не просто «куда идти», а конкретный план: оценки, учебные заведения, документы, шаги.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CHECKLIST -->
+<section class="checklist-section">
+  <div class="section-label">Проверьте себя</div>
+  <h2 class="section-title">5 признаков, что пора действовать</h2>
+  <p class="checklist-intro">Если вы отвечаете «да» хотя бы на 3 пункта — мы точно можем помочь:</p>
+  <div class="checklist-steps">
+    <div class="checklist-step">
+      <div class="step-num">1</div>
+      <div class="step-text">
+        <h4>«Не знаю, кем хочу стать»</h4>
+        <p>Ребёнок отвечает так на вопрос о будущем — или отмалчивается совсем.</p>
+      </div>
+    </div>
+    <div class="checklist-step">
+      <div class="step-num">2</div>
+      <div class="step-text">
+        <h4>Учится, но без интереса</h4>
+        <p>Оценки есть, но огня нет. Всё — «потому что надо», не потому что интересно.</p>
+      </div>
+    </div>
+    <div class="checklist-step">
+      <div class="step-num">3</div>
+      <div class="step-text">
+        <h4>Выбор «за компанию» или «по совету»</h4>
+        <p>Ребёнок идёт туда, куда идут друзья или говорят родители — без своего мнения.</p>
+      </div>
+    </div>
+    <div class="checklist-step">
+      <div class="step-num">4</div>
+      <div class="step-text">
+        <h4>Тревога перед выбором специальности</h4>
+        <p>В семье напряжённость, страх ошибиться, давление «времени уже нет».</p>
+      </div>
+    </div>
+    <div class="checklist-step">
+      <div class="step-num">5</div>
+      <div class="step-text">
+        <h4>Нет понимания своих талантов</h4>
+        <p>Ребёнок не видит в себе ничего особенного, хотя вы точно знаете — он на многое способен.</p>
+      </div>
+    </div>
+  </div>
+  <div class="result-box">
+    <p>Если узнали ситуацию — <strong>это не тупик</strong>. Это просто момент, когда нужен правильный проводник. Именно это я и делаю.</p>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section">
+  <div class="section-label">Как это работает</div>
+  <h2 class="section-title">Процесс шаг за шагом</h2>
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="p-num">1</div>
+      <div class="p-content">
+        <span class="p-emoji">🤝</span>
+        <h4>Знакомство и запрос</h4>
+        <p>Мы говорим о ситуации, целях и страхах. Я слушаю — без осуждения, с теплом. Это уже снимает тревогу на 50%.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="p-num">2</div>
+      <div class="p-content">
+        <span class="p-emoji">🔍</span>
+        <h4>Глубокое исследование</h4>
+        <p>Изучаем темперамент, способности, интересы, ценности. Не тест из интернета — живая работа, где ребёнок сам делает открытия.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="p-num">3</div>
+      <div class="p-content">
+        <span class="p-emoji">💡</span>
+        <h4>Направления и варианты</h4>
+        <p>Подбираем 2-3 реальных направления с учётом рынка труда в Польше, оценок и шансов на поступление.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="p-num">4</div>
+      <div class="p-content">
+        <span class="p-emoji">🗺️</span>
+        <h4>Стратегия и план действий</h4>
+        <p>Конкретные шаги: что учить, куда подавать, какие репетиторы нужны, как выгодно подать себя.</p>
+      </div>
+    </div>
+    <div class="process-step" style="padding-bottom:0">
+      <div class="p-num">🎉</div>
+      <div class="p-content">
+        <span class="p-emoji">🥂</span>
+        <h4>Праздник победы!</h4>
+        <p>Ребёнок поступил туда, куда хотел. Вы выдыхаете. А ребёнок — идёт вперёд с уверенностью.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="results-section">
+  <div class="section-label">Что вы получите в результате</div>
+  <h2 class="section-title">После работы со мной</h2>
+  <div class="results-grid">
+    <div class="result-card">
+      <span class="r-icon">🔥</span>
+      <h4>Ребёнок сам хочет учиться</h4>
+      <p>Он понимает, зачем — и это меняет всё. Мотивация идёт изнутри, а не от вашего давления.</p>
+    </div>
+    <div class="result-card">
+      <span class="r-icon">🎯</span>
+      <h4>Ясность в выборе</h4>
+      <p>Конкретные направления, конкретные учебные заведения. Больше нет «не знаю куда» — есть план.</p>
+    </div>
+    <div class="result-card">
+      <span class="r-icon">😮‍💨</span>
+      <h4>Вы снова дышите</h4>
+      <p>Тревога за будущее ребёнка отступает. Вы видите, что всё под контролем — и что ребёнок справится.</p>
+    </div>
+    <div class="result-card">
+      <span class="r-icon">📋</span>
+      <h4>Готовый маршрут</h4>
+      <p>Документы, заведения, шаги — всё структурировано. Больше не нужно гадать, что делать следующим.</p>
+    </div>
+    <div class="result-card">
+      <span class="r-icon">💬</span>
+      <h4>Диалог в семье</h4>
+      <p>Ребёнок начинает говорить о своём будущем — открыто, с энтузиазмом. Отношения становятся теплее.</p>
+    </div>
+    <div class="result-card">
+      <span class="r-icon">🌱</span>
+      <h4>Уверенность в себе</h4>
+      <p>Ребёнок открывает свои таланты и перестаёт бояться будущего. Это меняет его на годы вперёд.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section">
+  <div class="section-label">Отзывы</div>
+  <h2 class="section-title" style="color:white">Что говорят родители</h2>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Классный разбор, многое из написанного мне откликнулось и я уже думала об этом. Всё было очень точно и по делу.</p>
+      <div class="review-author">
+        <div class="review-avatar">М</div>
+        <div>
+          <div class="review-name">Мама подростка</div>
+          <div class="review-role">Индивидуальная консультация</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Я под впечатлением — читала и вся моя жизнь пронеслась перед глазами. То, что для меня было нормой, я не видела в себе и не замечала. Очень глубокая работа.</p>
+      <div class="review-author">
+        <div class="review-avatar">В</div>
+        <div>
+          <div class="review-name">Вероника</div>
+          <div class="review-role">Клиент</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Твой метод исследования очень глубокий, всё разложено по полочкам. Ты — мега крутой проводник для неопределившихся подростков и взрослых, которые хотят перепрофилироваться.</p>
+      <div class="review-author">
+        <div class="review-avatar">А</div>
+        <div>
+          <div class="review-name">Мама + психолог по образованию</div>
+          <div class="review-role">Работа с сыном Тёмой</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Тёма после работы с тобой стал часто самостоятельно садиться к подготовке к ЦТ. Не знаю, что ты с ним сделала))) Мне это нравится! Я тебе очень благодарна.</p>
+      <div class="review-author">
+        <div class="review-avatar">М</div>
+        <div>
+          <div class="review-name">Мама Тёмы</div>
+          <div class="review-role">Групповая программа</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Хороший опыт услышать со стороны оценку профессиональных способностей без воды, конструктивно. Своими заданиями ты даёшь возможность сфокусироваться и порефлексировать. С тобой очень приятно — видно, что ты сама горишь этим делом.</p>
+      <div class="review-author">
+        <div class="review-avatar">К</div>
+        <div>
+          <div class="review-name">Клиент</div>
+          <div class="review-role">Индивидуальная консультация</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Доброе утро, я всё прочитал и обязательно прислушаюсь к вашему мнению. Насчёт профориентации — мне всё понравилось: очень классная атмосфера, много интересных и главное нелёгких вопросов. Спасибо что проделали такую большую работу.</p>
+      <div class="review-author">
+        <div class="review-avatar">П</div>
+        <div>
+          <div class="review-name">Подросток</div>
+          <div class="review-role">После сессии профориентации</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="packages-section" id="packages">
+  <div class="section-label">Программы</div>
+  <h2 class="section-title">Выберите свой формат</h2>
+  <p class="section-sub">Индивидуально или в группе — каждый найдёт то, что подходит именно ему.</p>
+  <div class="packages-grid">
+
+    <!-- Package 1 -->
+    <div class="package-card">
+      <div class="package-type">Индивидуально</div>
+      <div class="package-name">Консультация</div>
+      <div class="package-price">250 zł</div>
+      <div class="price-note">Разовая встреча · ~90 минут</div>
+      <p class="package-desc">Глубокое исследование темперамента, способностей и интересов. Получите конкретные рекомендации по направлению и учебным заведениям.</p>
+      <ul class="package-list">
+        <li>Изучение темперамента и типа личности</li>
+        <li>Анализ способностей и талантов</li>
+        <li>Подбор 2-3 направлений специализации</li>
+        <li>Рекомендации по учебным заведениям</li>
+        <li>Краткий письменный отчёт</li>
+      </ul>
+      <a href="#form" class="btn-package">Записаться →</a>
+    </div>
+
+    <!-- Package 2 -->
+    <div class="package-card featured">
+      <div class="featured-ribbon">Лучший выбор</div>
+      <div class="package-type">Индивидуально</div>
+      <div class="package-name">Полное сопровождение</div>
+      <div class="package-price">1 800 zł</div>
+      <div class="price-note">Под ключ · от выбора до зачисления</div>
+      <p class="package-desc">Беру все заботы на себя — от определения способностей до сдачи документов. Вы просто наблюдаете за тем, как ребёнок растёт.</p>
+      <ul class="package-list">
+        <li>Профориентация + анализ оценок и шансов</li>
+        <li>Стратегия: репетиторы, волонтариат, усиление знаний</li>
+        <li>Посещение 3 потенциальных учебных заведений</li>
+        <li>Заполнение и подача документов</li>
+        <li>Поддержка на каждом этапе</li>
+        <li>🎉 Вместе празднуем поступление!</li>
+      </ul>
+      <a href="#form" class="btn-package">Хочу сопровождение →</a>
+    </div>
+
+    <!-- Package 3 -->
+    <div class="package-card group-card group-full">
+      <div class="package-type">Групповой формат · 6-8 человек</div>
+      <div class="package-name">Профидентификация</div>
+      <div class="package-price">1 000 zł</div>
+      <div class="price-note">16 встреч · полный курс</div>
+      <p class="package-desc">Мощная программа в мини-группе: подростки не только узнают себя, но и учатся друг у друга, пробуют роли и строят свой маршрут.</p>
+      <ul class="package-list">
+        <li>🔍 Самопознание: психологический профиль, таланты, карта ценностей (3 встречи)</li>
+        <li>📚 Просвещение: тренды рынка труда, мифы о профессиях, встречи с профессионалами (3 встречи)</li>
+        <li>💥 Мотивация: честный разговор об ответственности и будущем (1 встреча)</li>
+        <li>🎭 Примерка ролей: деловые игры, групповые проекты, посещение среды (4 встречи)</li>
+        <li>🗺️ Мой маршрут: выбор образования, портфолио, презентация перед группой (3 встречи + финал)</li>
+      </ul>
+      <a href="#form" class="btn-package">Записаться в группу →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section" id="form">
+  <div class="section-label">Первый шаг</div>
+  <h2 class="section-title">Оставьте заявку</h2>
+  <p class="section-sub">Я свяжусь с вами в течение 24 часов и мы выберем удобное время для первой встречи.</p>
+  <div class="contact-form">
+    <div id="form-inner">
+      <div class="form-group">
+        <label>Ваше имя *</label>
+        <input type="text" id="f-name" placeholder="Как вас зовут?" required>
+      </div>
+      <div class="form-group">
+        <label>Телефон / Telegram *</label>
+        <input type="text" id="f-phone" placeholder="+48 ... или @username" required>
+      </div>
+      <div class="form-group">
+        <label>Кто обращается?</label>
+        <select id="f-who">
+          <option value="">Выберите...</option>
+          <option value="mama">Мама подростка</option>
+          <option value="teen">Я подросток (пишу сам)</option>
+          <option value="adult">Взрослый (смена профессии)</option>
+          <option value="other">Другое</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Какая программа интересует?</label>
+        <select id="f-program">
+          <option value="">Выберите...</option>
+          <option value="consult">Разовая консультация (250 zł)</option>
+          <option value="full">Полное сопровождение (1800 zł)</option>
+          <option value="group">Групповой курс (1000 zł)</option>
+          <option value="idk">Не знаю — нужен совет</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Расскажите о ситуации (необязательно)</label>
+        <textarea id="f-message" placeholder="Что беспокоит? Что хотите изменить?"></textarea>
+      </div>
+      <button class="btn-submit" onclick="submitForm()">Хочу записаться →</button>
+      <p class="form-privacy">🔒 Ваши данные в безопасности. Никакого спама.</p>
+    </div>
+    <div class="form-success" id="form-success">
+      <div class="success-icon">🌿</div>
+      <h3>Заявка принята!</h3>
+      <p>Я свяжусь с вами в течение 24 часов. Уже скоро у вас будет ясность и план — и станет легче дышать. 💛</p>
+    </div>
+  </div>
+</section>
+
+<!-- TELEGRAM -->
+<section class="tg-section">
+  <h2 class="section-title">Есть вопросы? Напишите в Telegram</h2>
+  <p>Отвечаю быстро, по-человечески, без скриптов 🙂</p>
+  <a href="https://t.me/veronika_profile" class="btn-tg" target="_blank">
+    <span class="tg-icon">✈️</span>
+    Написать в Telegram
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Вероника · Профориентация для подростков и взрослых · Польша</p>
+  <p>С любовью и верой в каждого ребёнка 🧡</p>
+</footer>
+
+<!-- FLOATING CTA -->
+<a href="#form" class="float-cta" title="Записаться">📝</a>
+
+<script>
+  function switchTab(tab) {
+    document.querySelectorAll('.who-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.who-content').forEach(c => c.classList.remove('active'));
+    document.getElementById('tab-' + tab).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  function submitForm() {
+    const name = document.getElementById('f-name').value.trim();
+    const phone = document.getElementById('f-phone').value.trim();
+    if (!name || !phone) {
+      alert('Пожалуйста, заполните имя и контакт 🙏');
+      return;
+    }
+    document.getElementById('form-inner').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+    // Here you would normally send data to backend/Telegram bot
+  }
+
+  // Intersection observer for subtle reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.checklist-step, .result-card, .review-card, .package-card, .promise-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
