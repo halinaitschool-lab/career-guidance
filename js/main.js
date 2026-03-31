@@ -53,25 +53,64 @@ const revealObserver = new IntersectionObserver((entries) => {
 reveals.forEach(el => revealObserver.observe(el));
 
 // ── Active nav link ──
-const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+const currentPagePath = window.location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.nav-links a').forEach(a => {
   const href = a.getAttribute('href');
-  if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+  if (href === currentPagePath || (currentPagePath === '' && href === 'index.html')) {
     a.classList.add('active');
   } else {
     a.classList.remove('active');
   }
 });
 
-// ── Active language ──
-const pathSegments = window.location.pathname.split('/');
-const currentLang = pathSegments.length > 1 ? pathSegments[1] : '';
+// ── Active language & dynamic language switching ──
+const isLocal = window.location.hostname === 'localhost' 
+            || window.location.hostname === '127.0.0.1';
 
-document.querySelectorAll('.lang-btn').forEach(langBtn => {
-  const href = langBtn.getAttribute('href');
-  const langFromHref = href.split('/')[1]; // Extract language from href like '/pl/kontakt.html'
+// Determine the base path for language links
+const getLanguageBaseUrl = () => {
+  const pathname = window.location.pathname;
   
-  if (langFromHref === currentLang) {
+  // On production: /career-guidance/ru/opinie.html
+  // On local: /ru/opinie.html
+  const isProdPath = pathname.includes('/career-guidance/');
+  const prodBase = '/career-guidance/';
+  const localBase = '/';
+  
+  return isProdPath ? prodBase : localBase;
+};
+
+// Get current language and page
+const getLanguageInfo = () => {
+  const pathname = window.location.pathname;
+  const segments = pathname.split('/').filter(s => s); // Remove empty strings
+  
+  let currentLang = '';
+  let currentPage = 'index.html';
+  
+  // Check if path includes 'career-guidance' (production)
+  if (segments.includes('career-guidance')) {
+    const idx = segments.indexOf('career-guidance');
+    currentLang = segments[idx + 1] || '';
+    currentPage = segments[idx + 2] || 'index.html';
+  } else {
+    // Local or gh-pages without career-guidance
+    currentLang = segments[0] || '';
+    currentPage = segments[1] || 'index.html';
+  }
+  
+  return { currentLang, currentPage };
+};
+
+const { currentLang, currentPage } = getLanguageInfo();
+const baseUrl = getLanguageBaseUrl();
+
+// Update language button links
+document.querySelectorAll('.lang-btn').forEach(langBtn => {
+  const targetLang = langBtn.textContent.trim().toLowerCase(); // 'pl' or 'ru'
+  langBtn.href = `${baseUrl}${targetLang}/${currentPage}`;
+  
+  if (targetLang === currentLang) {
     langBtn.classList.add('active-lang');
   } else {
     langBtn.classList.remove('active-lang');
