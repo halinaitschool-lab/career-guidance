@@ -72,16 +72,18 @@ const getLanguageInfo = () => {
   let currentLang = '';
   let currentPage = 'index.html';
   let baseUrl = '/';
+  let isProd = false;
   
   // Check if path includes 'career-guidance' (production on GitHub Pages)
   if (segments.includes('career-guidance')) {
+    isProd = true;
     const idx = segments.indexOf('career-guidance');
     baseUrl = '/career-guidance/';
     currentLang = segments[idx + 1] || '';
     currentPage = segments[idx + 2] || 'index.html';
   } else {
-    // Local development or direct root access
-    baseUrl = '/';
+    // Local development - still add career-guidance for consistency
+    baseUrl = '/career-guidance/';
     currentLang = segments[0] || '';
     currentPage = segments[1] || 'index.html';
   }
