@@ -294,8 +294,8 @@ h1,h2,h3,h4 { font-family: var(--font-display); line-height: 1.2; }
 .reddit-section { background: white; padding: 96px 0; }
 .reddit-layout { display: grid; gap: 56px; }
 @media (min-width: 900px) { .reddit-layout { grid-template-columns: 1fr 1fr; align-items: center; } }
-.reddit-left h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--dark); margin-bottom: 16px; }
-.reddit-left p { font-size: 1rem; color: var(--muted); line-height: 1.75; margin-bottom: 24px; }
+.reddit-right h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--dark); margin-bottom: 16px; }
+.reddit-right p { font-size: 1rem; color: var(--muted); line-height: 1.75; margin-bottom: 24px; }
 .reddit-cta-text {
   display: flex; align-items: flex-start; gap: 10px;
   background: var(--olive-pale); border-radius: var(--radius-sm);
@@ -403,7 +403,7 @@ h1,h2,h3,h4 { font-family: var(--font-display); line-height: 1.2; }
 .about-teaser-layout { display: grid; gap: 56px; align-items: center; }
 @media (min-width: 900px) { .about-teaser-layout { grid-template-columns: 1fr 1fr; } }
 .about-teaser-text h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--dark); margin-bottom: 20px; }
-.about-teaser-text p { font-size: 1rem; color: var(--muted); line-height: 1.78; margin-bottom: 16px; }
+.about-teaser-text p, .about-teaser-text ul { font-size: 1rem; color: var(--muted); line-height: 1.78; margin-bottom: 16px; }
 
 /* ══ SERVICES TEASER ══ */
 .services-teaser { background: var(--cream); padding: 96px 0; }
