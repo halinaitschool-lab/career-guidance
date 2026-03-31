@@ -64,46 +64,32 @@ document.querySelectorAll('.nav-links a').forEach(a => {
 });
 
 // ── Active language & dynamic language switching ──
-const isLocal = window.location.hostname === 'localhost' 
-            || window.location.hostname === '127.0.0.1';
-
-// Determine the base path for language links
-const getLanguageBaseUrl = () => {
-  const pathname = window.location.pathname;
-  
-  // On production: /career-guidance/ru/opinie.html
-  // On local: /ru/opinie.html
-  const isProdPath = pathname.includes('/career-guidance/');
-  const prodBase = '/career-guidance/';
-  const localBase = '/';
-  
-  return isProdPath ? prodBase : localBase;
-};
-
-// Get current language and page
+// Get current language and page, and detect environment
 const getLanguageInfo = () => {
   const pathname = window.location.pathname;
   const segments = pathname.split('/').filter(s => s); // Remove empty strings
   
   let currentLang = '';
   let currentPage = 'index.html';
+  let baseUrl = '/';
   
-  // Check if path includes 'career-guidance' (production)
+  // Check if path includes 'career-guidance' (production on GitHub Pages)
   if (segments.includes('career-guidance')) {
     const idx = segments.indexOf('career-guidance');
+    baseUrl = '/career-guidance/';
     currentLang = segments[idx + 1] || '';
     currentPage = segments[idx + 2] || 'index.html';
   } else {
-    // Local or gh-pages without career-guidance
+    // Local development or direct root access
+    baseUrl = '/';
     currentLang = segments[0] || '';
     currentPage = segments[1] || 'index.html';
   }
   
-  return { currentLang, currentPage };
+  return { currentLang, currentPage, baseUrl };
 };
 
-const { currentLang, currentPage } = getLanguageInfo();
-const baseUrl = getLanguageBaseUrl();
+const { currentLang, currentPage, baseUrl } = getLanguageInfo();
 
 // Update language button links
 document.querySelectorAll('.lang-btn').forEach(langBtn => {
