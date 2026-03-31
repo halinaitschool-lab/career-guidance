@@ -6,7 +6,10 @@
 
   <script>
 (function () {
-  const base = '/career-guidance/'; // 🔥 ВАЖЛИВО
+  const isLocal = window.location.hostname === 'localhost' 
+               || window.location.hostname === '127.0.0.1';
+
+  const base = isLocal ? '/' : '/career-guidance/'; // 🔥 магія тут
 
   const userLang = navigator.language || navigator.userLanguage;
 
