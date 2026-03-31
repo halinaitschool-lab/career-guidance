@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вероника — Карьерный консультант</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Weroni<span>ka</span></a>
+    <button class="burger" id="burger" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="active">Главная</a></li>
+      <li><a href="uslugi.html">Услуги</a></li>
+      <li><a href="o-mnie.html">Обо мне</a></li>
+      <li><a href="opinie.html">Отзывы</a></li>
+      <li><a href="kontakt.html">Контакт</a></li>
+      <li class="nav-lang">
+        <a href="/pl/index.html" class="lang-btn active-lang">PL</a>
+        <span>/</span>
+        <a href="/ru/index.html" class="lang-btn">RU</a>
+      </li>
+      <li><a href="kontakt.html#cal" class="nav-cta">Бесплатная консультация</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="hero">
+  <div class="hero-parallax" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge reveal">
+      <i class="fa-solid fa-seedling"></i>
+      Карьерный консультант · Преподаватель · Польша
+    </div>
+    <h1 class="hero-title reveal reveal-d1">
+      Вы думаете, <em>подходит ли это направление</em> для вашего ребенка?
+    </h1>
+    <p class="hero-sub reveal reveal-d2">
+      Я Вероника — карьерный консультант и преподаватель. Помогаю мамам подростков отдохнуть и взрослым найти свой карьерный путь.
+    </p>
+    <div class="hero-cards reveal reveal-d3">
+
+      <!-- Card 1: Teen -->
+      <div class="hero-card">
+        <div class="hero-card-icon"><i class="fa-solid fa-user-graduate"></i></div>
+        <div class="hero-card-tag">Для подростков</div>
+        <h3>Ваш ребенок выходит из сессии с четким направлением и горящим взглядом</h3>
+        <p>ЕГЭ близко — а ребенок пожимает плечами? Покажу ему, что действительно его. <strong>Без давления. Без «ты должен».</strong></p>
+        <div class="hero-card-quote">
+          <i class="fa-solid fa-quote-left"></i>
+          <span>«Не знаю, что ты с ним сделала — но мне это очень нравится.»</span>
+          <cite>— Мама Тимы</cite>
+        </div>
+        <div class="hero-card-btns">
+          <a href="kontakt.html#cal" class="btn-main">
+            <i class="fa-solid fa-calendar-check"></i>
+            Хочу бесплатную консультацию
+          </a>
+          <a href="uslugi.html#nastolatki" class="btn-ghost">
+            Посмотреть программу <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2: Adult -->
+      <div class="hero-card hero-card--adult">
+        <div class="hero-card-icon"><i class="fa-solid fa-compass"></i></div>
+        <div class="hero-card-tag">Для взрослых</div>
+        <h3>Найдите работу, на которую вы будете вставать с улыбкой — даже после 30, 40+</h3>
+        <p>Вы идете на работу и уже в лифте думаете: «Снова то же самое»? Помогу найти то, что действительно ваше. <strong>Конкретная карта. С планом.</strong></p>
+        <div class="hero-card-quote">
+          <i class="fa-solid fa-quote-left"></i>
+          <span>«Теперь я точно знаю, чего хочу и в каком направлении идти.»</span>
+          <cite>— Клиентка, 34 года</cite>
+        </div>
+        <div class="hero-card-btns">
+          <a href="kontakt.html#cal" class="btn-main btn-main--adult">
+            <i class="fa-solid fa-calendar-check"></i>
+            Хочу бесплатную консультацию
+          </a>
+          <a href="uslugi.html#doroslych" class="btn-ghost btn-ghost--adult">
+            Посмотреть программу <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <span>Узнайте больше</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+</section>
+
+<!-- ══ TRUST STRIP ══ -->
+<div class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item"><i class="fa-solid fa-users"></i><span>Более 50 семей</span></div>
+    <div class="trust-sep"></div>
+    <div class="trust-item"><i class="fa-solid fa-graduation-cap"></i><span>Карьерный консультант</span></div>
+    <div class="trust-sep"></div>
+    <div class="trust-item"><i class="fa-solid fa-flag"></i><span>Работаю в Польше</span></div>
+    <div class="trust-sep"></div>
+    <div class="trust-item"><i class="fa-solid fa-bolt"></i><span>Результат за 90 минут</span></div>
+    <div class="trust-sep"></div>
+    <div class="trust-item"><i class="fa-solid fa-heart"></i><span>Индивидуальный подход</span></div>
+  </div>
+</div>
+
+<!-- ══ REDDIT VOICE ══ -->
+<section class="reddit-section">
+  <div class="container">
+    <div class="reddit-layout">
+      <div class="reddit-left reveal">
+        <div class="section-eyebrow"><i class="fa-brands fa-reddit"></i> Что говорят подростки</div>
+        <h2>Ваш ребенок не ленив.<br>Ему просто нужно направление.</h2>
+        <p>На форумах пишут точно так же — это нормально. Отсутствие направления — это не изъян характера. Это сигнал о том, что нужен правильный человек.</p>
+        <div class="reddit-cta-text">
+          <i class="fa-solid fa-seedling"></i>
+          <strong>Это инвестиция, которая окупится на протяжении всей его профессиональной карьеры.</strong>
+        </div>
+        <a href="kontakt.html#cal" class="btn-main" style="margin-top:24px; display:inline-flex;">
+          <i class="fa-solid fa-calendar-check"></i>
+          Хочу бесплатную консультацию
+        </a>
+      </div>
+      <div class="reddit-right reveal reveal-d1">
+        <div class="reddit-card">
+          <div class="reddit-card-header">
+            <div class="reddit-avatar"><i class="fa-brands fa-reddit-alien"></i></div>
+            <div>
+              <div class="reddit-username">u/anon_teen_pl</div>
+              <div class="reddit-sub">r/Polska · карьера</div>
+            </div>
+          </div>
+          <p class="reddit-text">
+            «Хорошо, но что если кто-то не знает, в каком направлении идти? Со мной то же самое... Я мог бы сидеть неделями и искать все существующие профессии и <strong>все еще не знал бы, в каком направлении идти…»</strong>
+          </p>
+          <div class="reddit-footer">
+            <span><i class="fa-solid fa-arrow-up"></i> 847</span>
+            <span><i class="fa-regular fa-comment"></i> 203 комментария</span>
+          </div>
+        </div>
+        <div class="reddit-response">
+          <i class="fa-solid fa-arrow-turn-down-right"></i>
+          <p>Именно поэтому существует эта работа — чтобы не сидеть неделями в бесконечности.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROMISE ══ -->
+<section class="promise-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-eyebrow"><i class="fa-solid fa-sun"></i> Что изменится</div>
+      <h2>Представьте такое утро</h2>
+      <p class="section-lead">Суббота. Ребенок сам проснулся, открыл тетрадь и учится — потому что знает зачем. Вы пьете кофе и не беспокоитесь о его будущем.</p>
+    </div>
+    <div class="promise-grid">
+      <div class="promise-card reveal">
+        <div class="promise-icon"><i class="fa-solid fa-compass"></i></div>
+        <h3>«Не знаю» — исчезает навсегда</h3>
+        <p>Ребенок выходит из сессии с конкретным направлением, соответствующим его темпераменту и талантам — не чужим ожиданиям.</p>
+      </div>
+      <div class="promise-card reveal reveal-d1">
+        <div class="promise-icon"><i class="fa-solid fa-fire"></i></div>
+        <h3>Хочет — сам по себе</h3>
+        <p>Мамы пишут: «Не знаю, что ты с ним сделала, но сам уселся за учебу». Это и есть настоящий результат.</p>
+      </div>
+      <div class="promise-card reveal reveal-d2">
+        <div class="promise-icon"><i class="fa-solid fa-lungs"></i></div>
+        <h3>Вы наконец отдохнули</h3>
+        <p>Тревога «а что если ошибется» отпускает. Есть план, есть карта, есть ясность. Вы наконец перестаете чувствовать себя виноватой за его будущее.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CHECKLIST ══ -->
+<section class="checklist-section">
+  <div class="container">
+    <div class="checklist-layout">
+      <div class="checklist-left reveal">
+        <div class="section-eyebrow"><i class="fa-solid fa-list-check"></i> Проверьте себя</div>
+        <h2>5 сигналов, что пора действовать</h2>
+        <p>Если вы ответили «да» хотя бы на 3 пункта — я уверена, что смогу помочь.</p>
+        <div class="checklist-items">
+          <div class="check-item">
+            <div class="check-num">1</div>
+            <div>
+              <strong>Экзамены совсем близко — а он все еще не знает</strong>
+              <p>Времени мало, давление растет, каждый разговор заканчивается напряжением.</p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-num">2</div>
+            <div>
+              <strong>Учится, но без энтузиазма</strong>
+              <p>Оценки есть, но огня нет. Всё «потому что надо».</p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-num">3</div>
+            <div>
+              <strong>Вы беспокоитесь, что выберет не свой путь</strong>
+              <p>«Хочет быть программистом — но это действительно он?»</p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-num">4</div>
+            <div>
+              <strong>Выбирает «за друзьями» без собственного мнения</strong>
+              <p>Идет туда, куда друзья — потому что лучше не знает.</p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-num">5</div>
+            <div>
+              <strong>Не видит в себе талантов</strong>
+              <p>Хотя вы прекрасно знаете, на что он способен.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="checklist-right reveal reveal-d1">
+        <!-- Photo placeholder -->
+        <div class="photo-placeholder">
+          <i class="fa-solid fa-image"></i>
+          <span>Ваше фото</span>
+        </div>
+        <div class="checklist-result-box">
+          <p>Если хотя бы 3 пункта про вас — пора действовать. Ваш ребенок уже сейчас мог бы идти вперед с поднятой головой.</p>
+          <a href="kontakt.html#cal" class="btn-main">
+            <i class="fa-solid fa-calendar-check"></i>
+            Хочу бесплатную консультацию
+          </a>
+          <div class="invest-note">
+            <i class="fa-solid fa-seedling"></i>
+            Это инвестиция, которая окупится на протяжении всей его профессиональной карьеры.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT TEASER ══ -->
+<section class="about-teaser">
+  <div class="container">
+    <div class="about-teaser-layout">
+      <div class="about-teaser-photo reveal">
+        <div class="photo-placeholder photo-placeholder--tall">
+          <i class="fa-solid fa-image"></i>
+          <span>Ваше фото</span>
+        </div>
+      </div>
+      <div class="about-teaser-text reveal reveal-d1">
+        <div class="section-eyebrow"><i class="fa-solid fa-user-circle"></i> Обо мне</div>
+        <h2>Я знаю, как выглядит эта дилемма — с двух сторон</h2>
+        <p>Я из Украины и Беларуси — понимаю детей, растущих между культурами, языками и разными системами образования. Их дилеммы я знаю изнутри.</p>
+        <p>Как карьерный консультант и преподаватель я сочетаю психологическую глубину с практическим знанием польского рынка труда. Я не даю общие советы — я строю конкретный, индивидуальный план.</p>
+        <a href="o-mnie.html" class="btn-outline">
+          Узнайте больше <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICES TEASER ══ -->
+<section class="services-teaser">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-eyebrow"><i class="fa-solid fa-briefcase"></i> Мои услуги</div>
+      <h2>Как выбрать правильный пакет?</h2>
+    </div>
+    <div class="services-cards">
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        <div class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+        <h3>Консультация</h3>
+        <div class="service-price">250 зл</div>
+        <p>Одна сессия была достаточна, что-то щелкнуло — <em>именно так описывают ее клиенты.</em></p>
+        <a href="uslugi.html#konsultacja" class="btn-ghost-dark">Узнайте больше →</a>
+      </div>
+      <div class="service-card service-card--featured reveal reveal-d1">
+        <div class="service-featured-label">Лучший выбор</div>
+        <div class="service-num">02</div>
+        <div class="service-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+        <h3>Полная опека</h3>
+        <div class="service-price">1 800 зл</div>
+        <p><em>«Не знаю, как-то критично смотрю на ее желание стать программисткой»</em> — именно здесь мы это вместе проверим.</p>
+        <a href="uslugi.html#pelna-opieka" class="btn-main" style="margin-top:16px; display:inline-flex; font-size:0.9rem;">Посмотреть пакет →</a>
+      </div>
+      <div class="service-card reveal reveal-d2">
+        <div class="service-num">03</div>
+        <div class="service-icon"><i class="fa-solid fa-people-group"></i></div>
+        <h3>Группа</h3>
+        <div class="service-price">1 000 зл</div>
+        <p>Чтобы <em>чувствовать себя уверенней и действовать более осознанно</em> — именно это дает групповой курс.</p>
+        <a href="uslugi.html#grupa" class="btn-ghost-dark">Узнайте больше →</a>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:40px;">
+      <a href="uslugi.html" class="btn-outline reveal">
+        <i class="fa-solid fa-briefcase"></i> Сравните все пакеты
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ REVIEWS TEASER ══ -->
+<section class="reviews-teaser">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-eyebrow" style="color:var(--sunset-light)"><i class="fa-solid fa-star"></i> Отзывы клиентов</div>
+      <h2 style="color:white">Что говорят родители</h2>
+    </div>
+    <div class="reviews-mini-grid">
+      <div class="review-mini reveal">
+        <div class="review-mini-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="review-mini-quote">«Я словно увидела свою жизнь со стороны»</p>
+        <p class="review-mini-text">«Вероника:) я под впечатлением, читала и вся моя жизнь до и деятельность пронеслась перед глазами. То что для меня было нормой я не видела и не замечала в себе...»</p>
+        <div class="review-mini-author"><div class="rev-avatar">В</div><span>Кlientka Weronika</span></div>
+      </div>
+      <div class="review-mini reveal reveal-d1">
+        <div class="review-mini-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="review-mini-quote">«Есть реальный результат»</p>
+        <p class="review-mini-text">«Тема после работы с тобой стал часто самостоятельно садиться к подготовке к ЦТ. Не знаю, что ты с ним сделала))) надолго ли это, но мне это нравится»</p>
+        <div class="review-mini-author"><div class="rev-avatar">М</div><span>Мама Тёмы</span></div>
+      </div>
+      <div class="review-mini reveal reveal-d2">
+        <div class="review-mini-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="review-mini-quote">«Четко, глубоко и без воды»</p>
+        <p class="review-mini-text">«Хороший опыт услышать со стороны оценку проф способностям без воды, конструктивно... видно что ты сама горишь этим делом 🧡»</p>
+        <div class="review-mini-author"><div class="rev-avatar">К</div><span>Klientka</span></div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:40px;" class="reveal">
+      <a href="opinie.html" class="btn-outline btn-outline--light">
+        <i class="fa-solid fa-star"></i> Wszystkie opinie
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FINAL CTA ══ -->
+<section class="final-cta">
+  <div class="final-cta-bg" id="ctaBg"></div>
+  <div class="final-cta-overlay"></div>
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="final-cta-content reveal">
+      <i class="fa-solid fa-calendar-check final-cta-icon"></i>
+      <h2>Забронируйте бесплатную<br>15-минутную консультацию</h2>
+      <p>Расскажите мне о вашей ситуации. Вместе решим, что подойдет лучше всего — без давления и обязательств.</p>
+      <a href="kontakt.html#cal" class="btn-main btn-main--large">
+        <i class="fa-solid fa-calendar-check"></i>
+        Хочу сейчас — это бесплатно
+      </a>
+      <div class="invest-note invest-note--light">
+        <i class="fa-solid fa-seedling"></i>
+        Это инвестиция, которая окупится на протяжении всей его профессиональной карьеры.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TELEGRAM ══ -->
+<section class="tg-section">
+  <div class="container tg-inner">
+    <div>
+      <h3>Есть вопрос? Просто напишите</h3>
+      <p>Я отвечаю лично, быстро и по-человечески — без скриптов. Напишите что угодно: «не знаю, с чего начать» — подойдет тоже 🙂</p>
+    </div>
+    <a href="https://t.me/veronika_profile" class="btn-tg" target="_blank">
+      <i class="fa-brands fa-telegram"></i>
+      Написать Веронике
+    </a>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="nav-logo">Weroni<span>ka</span></div>
+      <p>Карьерный консультант и преподаватель.<br>Помогаю подросткам и взрослым найти свой путь.</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://t.me/veronika_profile" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <strong>Страницы</strong>
+      <a href="index.html">Главная</a>
+      <a href="uslugi.html">Услуги</a>
+      <a href="o-mnie.html">Обо мне</a>
+      <a href="opinie.html">Отзывы</a>
+      <a href="kontakt.html">Контакт</a>
+    </div>
+    <div class="footer-links">
+      <strong>Контакт</strong>
+      <a href="https://t.me/veronika_profile"><i class="fa-brands fa-telegram"></i> Telegram</a>
+      <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      <a href="kontakt.html#cal"><i class="fa-solid fa-calendar"></i> Хочу консультацию</a>
+      <div style="margin-top:12px;">
+        <a href="/pl/index.html" class="lang-pill active-lang">PL</a>
+        <a href="/ru/index.html" class="lang-pill">RU</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Вероника · Карьерный консультант · Польша &nbsp;·&nbsp; С любовью и верой в каждого ребенка 🧡</p>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+</body>
+</html>

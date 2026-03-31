@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt | Weronika — Doradca Zawodowy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+<!-- Cal inline embed code begins -->
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.eu/embed/embed.js", "init");
+Cal("init", "60min", {origin:"https://app.cal.eu"});
+
+  Cal.ns["60min"]("inline", {
+    elementOrSelector:"#my-cal-inline-60min",
+    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+    calLink: "halinaitlab/60min",
+  });
+
+  Cal.ns["60min"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#8A8835"},"dark":{"cal-brand":"#D06224"}},"hideEventTypeDetails":false,"layout":"month_view"});
+  </script>
+  <!-- Cal inline embed code ends -->
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Weroni<span>ka</span></a>
+    <button class="burger" id="burger"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Strona główna</a></li>
+      <li><a href="uslugi.html">Usługi</a></li>
+      <li><a href="o-mnie.html">O mnie</a></li>
+      <li><a href="opinie.html">Opinie</a></li>
+      <li><a href="kontakt.html" class="active">Kontakt</a></li>
+      <li class="nav-lang"><a href="/pl/kontakt.html" class="lang-btn active-lang">PL</a><span>/</span><a href="/ru/kontakt.html" class="lang-btn">RU</a></li>
+      <li><a href="#cal" class="nav-cta">Bezpłatna konsultacja</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="section-eyebrow"><i class="fa-solid fa-envelope"></i> Kontakt</div>
+    <h1>Porozmawiajmy</h1>
+    <p>Zarezerwuj bezpłatną 15-minutową konsultację — opowiedz mi o swojej sytuacji. Razem zdecydujemy, co najlepiej pasuje.</p>
+  </div>
+</div>
+
+<!-- CONTACT SECTION -->
+<section class="kontakt-section" id="cal">
+  <div class="container">
+    <div class="kontakt-grid">
+
+      <!-- Left: Info -->
+      <div class="kontakt-info reveal">
+        <div class="section-eyebrow"><i class="fa-solid fa-circle-info"></i> Jak się skontaktować</div>
+        <h2>Napisz lub zarezerwuj termin</h2>
+        <p>Odpowiadam osobiście, szybko i po ludzku — bez skryptów i asystentów. Napisz cokolwiek: „nie wiem od czego zacząć" — też pasuje.</p>
+
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fa-brands fa-telegram"></i></div>
+            <div>
+              <strong>Telegram</strong>
+              <a href="https://t.me/veronika_profile" target="_blank">@veronika_profile</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fa-brands fa-instagram"></i></div>
+            <div>
+              <strong>Instagram</strong>
+              <a href="https://instagram.com/weronika_doradca" target="_blank">@weronika_doradca</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fa-solid fa-globe"></i></div>
+            <div>
+              <strong>Lokalizacja</strong>
+              <span>Polska · sesje online i offline</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:var(--terra-pale); border-radius:var(--radius); padding:24px; border-left:3px solid var(--terra-dark);">
+          <h4 style="font-size:1.1rem; color:var(--dark); margin-bottom:10px;"><i class="fa-solid fa-clock" style="margin-right:8px; color:var(--terra-dark);"></i>Jak wygląda bezpłatna konsultacja?</h4>
+          <p style="font-size:0.9rem; color:var(--muted); line-height:1.75;">15 minut. Opowiadasz mi o sytuacji — ja słucham i zadaję kilka pytań. Na końcu wiesz, czy i jak mogę pomóc. Zero presji, zero zobowiązań.</p>
+        </div>
+
+        <div class="invest-note" style="margin-top:24px; color:var(--terra-dark);">
+          <i class="fa-solid fa-seedling"></i>
+          To inwestycja, która będzie procentowała przez całe jego życie zawodowe.
+        </div>
+      </div>
+
+      <!-- Right: Calendar -->
+      <div class="reveal reveal-d1">
+        <div class="cal-widget">
+          <h3><i class="fa-solid fa-calendar-check" style="color:var(--terra-dark); margin-right:10px;"></i>Zarezerwuj bezpłatną konsultację</h3>
+          <p>Wybierz wygodny dla Ciebie termin — 15 minut, online</p>
+          <!-- Cal.com embed -->
+          <div style="width:100%;height:100%;overflow:scroll; border-radius:var(--radius-sm); overflow:hidden;" id="my-cal-inline-60min"></div>
+          <p class="cal-placeholder-note">
+            <i class="fa-solid fa-lock" style="color:var(--olive);"></i>
+            Twoje dane są bezpieczne. Zero spamu — obiecuję.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:var(--cream); padding:80px 0;">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-eyebrow"><i class="fa-solid fa-circle-question"></i> FAQ</div>
+      <h2>Najczęstsze pytania</h2>
+    </div>
+    <div style="max-width:680px; margin:0 auto; display:flex; flex-direction:column; gap:16px;">
+      <div class="diff-card reveal" style="cursor:pointer;">
+        <h4>Czy sesje odbywają się online czy offline?</h4>
+        <p>Oferuję oba formaty — możemy spotkać się online (Google Meet, Zoom) lub offline w Polsce. Wybierz to, co Ci wygodniej.</p>
+      </div>
+      <div class="diff-card reveal reveal-d1">
+        <h4>Ile czasu zajmuje cały proces?</h4>
+        <p>Konsultacja to 1 spotkanie (~90 min). Pełna opieka trwa od kilku tygodni do kilku miesięcy — zależy od tego, na kiedy zaplanowane są egzaminy i rekrutacja. Kurs grupowy to 16 spotkań.</p>
+      </div>
+      <div class="diff-card reveal reveal-d2">
+        <h4>Czy dziecko musi być obecne na pierwszym spotkaniu?</h4>
+        <p>Pierwsze spotkanie może być tylko z mamą — żeby omówić sytuację. Potem pracuję bezpośrednio z dzieckiem. Ustalamy to indywidualnie.</p>
+      </div>
+      <div class="diff-card reveal reveal-d3">
+        <h4>W jakim języku prowadzone są sesje?</h4>
+        <p>Po polsku i rosyjsku — bez problemu. Rozumiem też ukraiński.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tg-section"><div class="container tg-inner"><div><h3>Masz pytanie? Po prostu napisz</h3><p>Odpowiadam osobiście, szybko i po ludzku 🙂</p></div><a href="https://t.me/veronika_profile" class="btn-tg" target="_blank"><i class="fa-brands fa-telegram"></i>Napisz do Weroniki</a></div></section>
+<footer><div class="container footer-inner"><div class="footer-brand"><a href="index.html" class="nav-logo" style="display:block;margin-bottom:12px;">Weroni<span>ka</span></a><p>Doradca zawodowy i nauczyciel.</p><div class="footer-socials"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="https://t.me/veronika_profile"><i class="fa-brands fa-telegram"></i></a></div></div><div class="footer-links"><strong>Strony</strong><a href="index.html">Strona główna</a><a href="uslugi.html">Usługi</a><a href="o-mnie.html">O mnie</a><a href="opinie.html">Opinie</a><a href="kontakt.html">Kontakt</a></div><div class="footer-links"><strong>Kontakt</strong><a href="https://t.me/veronika_profile"><i class="fa-brands fa-telegram"></i> Telegram</a><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a><div style="margin-top:12px;"><a href="/pl/kontakt.html" class="lang-pill active-lang">PL</a><a href="/ru/kontakt.html" class="lang-pill">RU</a></div></div></div><div class="footer-bottom"><p>© 2026 Weronika · Doradca zawodowy · Polska 🧡</p></div></footer>
+<script src="../main.js"></script>
+</body>
+</html>
