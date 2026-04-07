@@ -1,222 +1,325 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Услуги | Вероника — Карьерный консультант</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Услуги | Вероника — Карьерный консультант</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
 
-<!-- NAV -->
-<nav id="navbar">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">Weroni<span>ka</span></a>
-    <button class="burger" id="burger"><span></span><span></span><span></span></button>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="uslugi.html" class="active">Услуги</a></li>
-      <li><a href="o-mnie.html">Обо мне</a></li>
-      <li><a href="opinie.html">Отзывы</a></li>
-      <li><a href="kontakt.html">Контакт</a></li>
-      <li class="nav-lang">
-        <a href="/pl/uslugi.html" class="lang-btn active-lang">PL</a>
-        <span>/</span>
-        <a href="/ru/uslugi.html" class="lang-btn">RU</a>
-      </li>
-      <li><a href="kontakt.html#cal" class="nav-cta">Бесплатная консультация</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- PAGE HEADER -->
-<div class="page-header">
-  <div class="page-header-inner">
-    <div class="section-eyebrow"><i class="fa-solid fa-briefcase"></i> Мои услуги</div>
-    <h1>Как выбрать правильный пакет?</h1>
-    <p>Каждый ребенок и каждый взрослый уникальны. Поэтому у меня есть 3 разных формата — чтобы подойти под ваши потребности и возможности.</p>
-  </div>
-</div>
-
-<!-- HOW TO CHOOSE -->
-<section style="background:white; padding: 80px 0;">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-eyebrow"><i class="fa-solid fa-compass"></i> Для кого что?</div>
-      <h2>Начните с одного вопроса</h2>
-      <p class="section-lead">Вы просто хотите посмотреть, как это работает — или вам нужна комплексная поддержка от А до Я?</p>
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Weroni<span>ka</span></a>
+      <button class="burger" id="burger"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="uslugi.html" class="active">Услуги</a></li>
+        <li><a href="o-mnie.html">Обо мне</a></li>
+        <li><a href="opinie.html">Отзывы</a></li>
+        <li><a href="kontakt.html">Контакт</a></li>
+        <li class="nav-lang">
+          <a href="/pl/uslugi.html" class="lang-btn active-lang">PL</a>
+          <span>/</span>
+          <a href="/ru/uslugi.html" class="lang-btn">RU</a>
+        </li>
+        <li><a href="kontakt.html#cal" class="nav-cta">Бесплатная консультация</a></li>
+      </ul>
     </div>
-    <div class="services-cards">
-      <div class="service-card reveal">
-        <div class="service-num">01</div>
-        <div class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-        <h3>Идеально, если...</h3>
-        <p>...вы хотите посмотреть, как работает эта услуга, вы не готовы к длительному обязательству, но чувствуете, что что-то нужно изменить.</p>
-        <div style="font-size:0.85rem; font-weight:700; color:var(--terra-dark); margin-top:16px;">→ Консультация 250 зл</div>
-      </div>
-      <div class="service-card service-card--featured reveal reveal-d1">
-        <div class="service-featured-label">Лучший выбор</div>
-        <div class="service-num">02</div>
-        <div class="service-icon"><i class="fa-solid fa-map-location-dot"></i></div>
-        <h3>Идеально, если...</h3>
-        <p>...у вас есть ребенок перед экзаменами и вы хотите быть уверены, что все пройдет хорошо — от выбора до документов. Ноль стресса с вашей стороны.</p>
-        <div style="font-size:0.85rem; font-weight:700; color:var(--terra-dark); margin-top:16px;">→ Полная опека 1 800 зл</div>
-      </div>
-      <div class="service-card reveal reveal-d2">
-        <div class="service-num">03</div>
-        <div class="service-icon"><i class="fa-solid fa-people-group"></i></div>
-        <h3>Идеально, если...</h3>
-        <p>...ребенок на этапе общего самопознания, любит работу в группе и вы хотите решение с долгосрочным эффектом и хорошей ценой.</p>
-        <div style="font-size:0.85rem; font-weight:700; color:var(--olive); margin-top:16px;">→ Групповой курс 1 000 зл</div>
-      </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <div class="section-eyebrow"><i class="fa-solid fa-briefcase"></i> Мои услуги</div>
+      <h1>Как выбрать правильный пакет?</h1>
+      <p>Каждый ребенок и каждый взрослый уникальны. Поэтому у меня есть 3 разных формата — чтобы подойти под ваши
+        потребности и возможности.</p>
     </div>
   </div>
-</section>
 
-<!-- PACKAGES DETAIL -->
-<section class="packages-section" id="nastolatki">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-eyebrow"><i class="fa-solid fa-star"></i> Пакеты</div>
-      <h2>Выберите свой формат</h2>
-    </div>
-    <div class="packages-grid">
-
-      <!-- Package 1 -->
-      <div class="package-card-full reveal" id="konsultacja">
-        <div class="pkg-type">Индивидуально</div>
-        <div class="pkg-name">Консультация</div>
-        <div class="pkg-price">250 зл</div>
-        <div class="pkg-note">Одноразовое встреча · ~90 минут · онлайн или офлайн</div>
-        <div class="pkg-quote">
-          <i class="fa-solid fa-quote-left" style="margin-right:6px; font-size:0.8rem;"></i>
-          «Одной сессии было достаточно, что-то щелкнуло.»
+  <!-- HOW TO CHOOSE -->
+  <section style="background:white; padding: 80px 0;">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow"><i class="fa-solid fa-compass"></i> Для кого что?</div>
+        <h2>Начните с одного вопроса</h2>
+        <p class="section-lead">Вы просто хотите посмотреть, как это работает — или вам нужна комплексная поддержка от А
+          до Я?</p>
+      </div>
+      <div class="services-cards">
+        <div class="service-card reveal">
+          <div class="service-num">01</div>
+          <div class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+          <h3>Идеально, если...</h3>
+          <p>...вы хотите посмотреть, как работает эта услуга, вы не готовы к длительному обязательству, но чувствуете,
+            что что-то нужно изменить.</p>
+          <div style="font-size:0.85rem; font-weight:700; color:var(--terra-dark); margin-top:16px;">→ Консультация 250
+            зл</div>
         </div>
-        <p class="pkg-desc">Ваш ребенок выходит из сессии с конкретным направлением и осознанием своих сильных сторон. Первый шаг — без риска и длительных обязательств.</p>
-        <ul class="pkg-list">
-          <li>Анализ темперамента и типа личности</li>
-          <li>Раскрытие способностей и скрытых талантов</li>
-          <li>Подбор 2-3 реальных направлений учебы/школы</li>
-          <li>Рекомендации вузов и школ в Польше</li>
-          <li>Краткий письменный отчет после сессии</li>
-        </ul>
-        <a href="kontakt.html#cal" class="pkg-btn">Хочу первую встречу →</a>
-        <div class="invest-note" style="margin-top:16px;">
+        <div class="service-card service-card--featured reveal reveal-d1">
+          <div class="service-featured-label">Лучший выбор</div>
+          <div class="service-num">02</div>
+          <div class="service-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+          <h3>Идеально, если...</h3>
+          <p>...у вас есть ребенок перед экзаменами и вы хотите быть уверены, что все пройдет хорошо — от выбора до
+            документов. Ноль стресса с вашей стороны.</p>
+          <div style="font-size:0.85rem; font-weight:700; color:var(--terra-dark); margin-top:16px;">→ Полная опека 1
+            800 зл</div>
+        </div>
+        <div class="service-card reveal reveal-d2">
+          <div class="service-num">03</div>
+          <div class="service-icon"><i class="fa-solid fa-people-group"></i></div>
+          <h3>Идеально, если...</h3>
+          <p>...ребенок на этапе общего самопознания, любит работу в группе и вы хотите решение с долгосрочным эффектом
+            и хорошей ценой.</p>
+          <div style="font-size:0.85rem; font-weight:700; color:var(--olive); margin-top:16px;">→ Групповой курс 1 000
+            зл</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES DETAIL -->
+  <section class="packages-section" id="nastolatki">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow"><i class="fa-solid fa-star"></i> Пакеты</div>
+        <h2>Выберите свой формат</h2>
+      </div>
+      <div class="packages-grid">
+
+        <!-- Package 1 -->
+        <div class="package-card-full reveal" id="konsultacja">
+          <div class="pkg-type">Индивидуально</div>
+          <div class="pkg-name">Консультация</div>
+          <div class="pkg-price">250 зл</div>
+          <div class="pkg-note">Одноразовое встреча · ~90 минут · онлайн или офлайн</div>
+          <div class="pkg-quote">
+            <i class="fa-solid fa-quote-left" style="margin-right:6px; font-size:0.8rem;"></i>
+            «Одной сессии было достаточно, что-то щелкнуло.»
+          </div>
+          <p class="pkg-desc">Ваш ребенок выходит из сессии с конкретным направлением и осознанием своих сильных сторон.
+            Первый шаг — без риска и длительных обязательств.</p>
+          <ul class="pkg-list">
+            <li>Анализ темперамента и типа личности</li>
+            <li>Раскрытие способностей и скрытых талантов</li>
+            <li>Подбор 2-3 реальных направлений учебы/школы</li>
+            <li>Рекомендации вузов и школ в Польше</li>
+            <li>Краткий письменный отчет после сессии</li>
+          </ul>
+          <a href="kontakt.html#cal" class="pkg-btn">Хочу первую встречу →</a>
+          <div class="invest-note" style="margin-top:16px;">
+            <i class="fa-solid fa-seedling"></i>
+            Это инвестиция, которая окупится на протяжении всей его профессиональной карьеры.
+          </div>
+        </div>
+
+        <!-- Package 2 -->
+        <div class="package-card-full featured reveal reveal-d1" id="pelna-opieka">
+          <div class="pkg-ribbon">Лучший выбор</div>
+          <div class="pkg-type">Индивидуально</div>
+          <div class="pkg-name">Полная опека</div>
+          <div class="pkg-price">1 800 зл</div>
+          <div class="pkg-note">Под ключ · от «не знаю» до поступления</div>
+          <div class="pkg-quote">
+            <i class="fa-solid fa-quote-left" style="margin-right:6px; font-size:0.8rem;"></i>
+            «Не знаю, как-то критично смотрю на ее желание стать программисткой...» — именно здесь вместе мы это
+            проверим и найдем уверенный ответ.
+          </div>
+          <p class="pkg-desc">Вы просто наблюдаете, как ребенок поступает туда, где хотел. Все заботы беру на себя — от
+            первой встречи до момента, когда вместе открываете письмо о поступлении.</p>
+          <ul class="pkg-list">
+            <li>Полное консультирование + анализ реальных шансов на поступление</li>
+            <li>Стратегия: репетиторы, волонтерство, укрепление знаний</li>
+            <li>Визиты в 3 потенциальных вуза / школы</li>
+            <li>Заполнение и подача всех документов</li>
+            <li>Поддержка на каждом этапе — всегда в контакте</li>
+            <li>🎉 Вместе празднуем поступление!</li>
+          </ul>
+          <a href="kontakt.html#cal" class="pkg-btn">Хочу полную опеку →</a>
+          <div class="invest-note" style="margin-top:16px;">
+            <i class="fa-solid fa-seedling"></i>
+            Это инвестиция, которая окупится на протяжении всей его профессиональной карьеры.
+          </div>
+        </div>
+
+        <!-- Package 3 -->
+        <div class="package-card-full group reveal reveal-d2" id="grupa">
+          <div class="pkg-type">Групповой формат · 6-8 человек</div>
+          <div class="pkg-name">Идентификация профиля</div>
+          <div class="pkg-price">1 000 зл</div>
+          <div class="pkg-note">16 встреч · полный курс · мини-группа</div>
+          <div class="pkg-quote"
+            style="background:var(--olive-pale); border-left-color:var(--olive); color:var(--olive);">
+            <i class="fa-solid fa-quote-left" style="margin-right:6px; font-size:0.8rem;"></i>
+            «Чувствовать себя увереннее и действовать более осознанно» — именно это дает групповой курс.
+          </div>
+          <p class="pkg-desc">Ребенок не просто узнает себя — пробует, играет, встречает реальных представителей
+            профессий и строит свою личную карту дороги. В группе происходит что-то чудесное: дети вдохновляют друг
+            друга.</p>
+          <ul class="pkg-list">
+            <li>🔍 Самопознание: психологический профиль, таланты, карта ценностей (3 встречи)</li>
+            <li>📚 Рынок труда: тренды, мифы о профессиях, встречи с профессионалами (3 встречи)</li>
+            <li>💥 Мотивация: честный разговор о будущем и ответственности (1 встреча)</li>
+            <li>🎭 Попробуй роли: игры, групповые проекты, посещение профессиональной среды (4 встречи)</li>
+            <li>🗺️ Мой путь: портфолио, план развития, презентация перед группой (5 встреч)</li>
+          </ul>
+          <a href="kontakt.html#cal" class="pkg-btn" style="background:var(--olive);">Запишите ребенка в группу →</a>
+          <div class="invest-note" style="margin-top:16px; color:var(--olive);">
+            <i class="fa-solid fa-seedling"></i>
+            Это инвестиция, которая окупится на протяжении всей его профессиональной карьеры.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARE TABLE -->
+  <section class="compare-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow"><i class="fa-solid fa-table-columns"></i> Сравнение</div>
+        <h2>Что входит в каждый пакет?</h2>
+      </div>
+      <div style="overflow-x:auto;" class="reveal">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Что включено</th>
+              <th>Консультация<br><small>250 зл</small></th>
+              <th>Полная опека<br><small>1 800 зл</small></th>
+              <th>Групповой курс<br><small>1 000 зл</small></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Анализ темперамента и талантов</td>
+              <td><i class="fa-solid fa-check compare-check"></i></td>
+              <td><i class="fa-solid fa-check compare-check"></i></td>
+              <td><i class="fa-solid fa-check compare-check"></i></td>
+            </tr>
+            <tr>
+              <td>Подбор направлений учебы/школы</td>
+              <td><i class="fa-solid fa-check compare-check"></i></td>
+              <td><i class="fa-solid fa-check compare-check"></i></td>
+              <td><i class="fa-solid fa-check compare-check"></i></td>
+            </tr>
+            <tr>
+              <td>Письменный отчет</td>
+              <td><i class="fa-solid fa-check compare-check"></i></td>
+              <td><i class="fa-solid fa-check compare-check"></i></td>
+              <td><i class="fa-solid fa-xmark compare-cross"></i></td>
+            </tr>
+            <tr>
+              <td>Анализ оценок и шансов на поступление</td>
+              <td><i class="fa-solid fa-xmark compare-cross"></i></td>
+              <td><i class="fa-solid fa-check compare-check"></i></td>
+              <td><i class="fa-solid fa-xmark compare-cross"></i></td>
+            </tr>
+            <tr>
+              <td>Стратегия: репетиторы, волонтерство</td>
+              <td><i class="fa-solid fa-xmark compare-cross"></i></td>
+              <td><i class="fa-solid fa-check compare-check"></i></td>
+              <td><i class="fa-solid fa-xmark compare-cross"></i></td>
+            </tr>
+            <tr>
+              <td>Визиты в вузы/школы</td>
+              <td><i class="fa-solid fa-xmark compare-cross"></i></td>
+              <td><i class="fa-solid fa-check compare-check"></i> (3 визита)</td>
+              <td><i class="fa-solid fa-xmark compare-cross"></i></td>
+            </tr>
+            <tr>
+              <td>Заполнение документов</td>
+              <td><i class="fa-solid fa-xmark compare-cross"></i></td>
+              <td><i class="fa-solid fa-check compare-check"></i></td>
+              <td><i class="fa-solid fa-xmark compare-cross"></i></td>
+            </tr>
+            <tr>
+              <td>Работа в группе сверстников</td>
+              <td><i class="fa-solid fa-xmark compare-cross"></i></td>
+              <td><i class="fa-solid fa-xmark compare-cross"></i></td>
+              <td><i class="fa-solid fa-check compare-check"></i></td>
+            </tr>
+            <tr>
+              <td>Встречи с профессионалами</td>
+              <td><i class="fa-solid fa-xmark compare-cross"></i></td>
+              <td><i class="fa-solid fa-xmark compare-cross"></i></td>
+              <td><i class="fa-solid fa-check compare-check"></i></td>
+            </tr>
+            <tr>
+              <td>Портфолио и план карьеры</td>
+              <td><i class="fa-solid fa-xmark compare-cross"></i></td>
+              <td><i class="fa-solid fa-check compare-check"></i></td>
+              <td><i class="fa-solid fa-check compare-check"></i></td>
+            </tr>
+            <tr>
+              <td>Количество встреч</td>
+              <td>1</td>
+              <td>по мере необходимости</td>
+              <td>16</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="text-align:center; margin-top:48px;" class="reveal">
+        <a href="kontakt.html#cal" class="btn-main btn-main--large">
+          <i class="fa-solid fa-calendar-check"></i>
+          Хочу бесплатную 15-минутную консультацию
+        </a>
+        <div class="invest-note" style="justify-content:center; margin-top:16px;">
           <i class="fa-solid fa-seedling"></i>
           Это инвестиция, которая окупится на протяжении всей его профессиональной карьеры.
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Package 2 -->
-      <div class="package-card-full featured reveal reveal-d1" id="pelna-opieka">
-        <div class="pkg-ribbon">Лучший выбор</div>
-        <div class="pkg-type">Индивидуально</div>
-        <div class="pkg-name">Полная опека</div>
-        <div class="pkg-price">1 800 зл</div>
-        <div class="pkg-note">Под ключ · от «не знаю» до поступления</div>
-        <div class="pkg-quote">
-          <i class="fa-solid fa-quote-left" style="margin-right:6px; font-size:0.8rem;"></i>
-          «Не знаю, как-то критично смотрю на ее желание стать программисткой...» — именно здесь вместе мы это проверим и найдем уверенный ответ.
-        </div>
-        <p class="pkg-desc">Вы просто наблюдаете, как ребенок поступает туда, где хотел. Все заботы беру на себя — от первой встречи до момента, когда вместе открываете письмо о поступлении.</p>
-        <ul class="pkg-list">
-          <li>Полное консультирование + анализ реальных шансов на поступление</li>
-          <li>Стратегия: репетиторы, волонтерство, укрепление знаний</li>
-          <li>Визиты в 3 потенциальных вуза / школы</li>
-          <li>Заполнение и подача всех документов</li>
-          <li>Поддержка на каждом этапе — всегда в контакте</li>
-          <li>🎉 Вместе празднуем поступление!</li>
-        </ul>
-        <a href="kontakt.html#cal" class="pkg-btn">Хочу полную опеку →</a>
-        <div class="invest-note" style="margin-top:16px;">
-          <i class="fa-solid fa-seedling"></i>
-          Это инвестиция, которая окупится на протяжении всей его профессиональной карьеры.
-        </div>
+  <section class="tg-section">
+    <div class="container tg-inner">
+      <div>
+        <h3>Есть вопрос? Просто напишите</h3>
+        <p>Я отвечаю лично, быстро и по-человечески — без скриптов 🙂</p>
+      </div><a href="https://t.me/VeronicaSubota" class="btn-tg" target="_blank"><i
+          class="fa-brands fa-telegram"></i>Написать Веронике</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand"><a href="index.html" class="nav-logo"
+          style="display:block;margin-bottom:12px;">Weroni<span>ka</span></a>
+        <p>Карьерный консультант и преподаватель.</p>
+        <div class="footer-socials"><a href="https://www.instagram.com/veronicasubota" target="_blank"><i class="fa-brands fa-instagram"></i></a><a
+            href="https://t.me/VeronicaSubota" target="_blank"><i class="fa-brands fa-telegram"></i></a></div>
       </div>
-
-      <!-- Package 3 -->
-      <div class="package-card-full group reveal reveal-d2" id="grupa">
-        <div class="pkg-type">Групповой формат · 6-8 человек</div>
-        <div class="pkg-name">Идентификация профиля</div>
-        <div class="pkg-price">1 000 зл</div>
-        <div class="pkg-note">16 встреч · полный курс · мини-группа</div>
-        <div class="pkg-quote" style="background:var(--olive-pale); border-left-color:var(--olive); color:var(--olive);">
-          <i class="fa-solid fa-quote-left" style="margin-right:6px; font-size:0.8rem;"></i>
-          «Чувствовать себя увереннее и действовать более осознанно» — именно это дает групповой курс.
-        </div>
-        <p class="pkg-desc">Ребенок не просто узнает себя — пробует, играет, встречает реальных представителей профессий и строит свою личную карту дороги. В группе происходит что-то чудесное: дети вдохновляют друг друга.</p>
-        <ul class="pkg-list">
-          <li>🔍 Самопознание: психологический профиль, таланты, карта ценностей (3 встречи)</li>
-          <li>📚 Рынок труда: тренды, мифы о профессиях, встречи с профессионалами (3 встречи)</li>
-          <li>💥 Мотивация: честный разговор о будущем и ответственности (1 встреча)</li>
-          <li>🎭 Попробуй роли: игры, групповые проекты, посещение профессиональной среды (4 встречи)</li>
-          <li>🗺️ Мой путь: портфолио, план развития, презентация перед группой (5 встреч)</li>
-        </ul>
-        <a href="kontakt.html#cal" class="pkg-btn" style="background:var(--olive);">Запишите ребенка в группу →</a>
-        <div class="invest-note" style="margin-top:16px; color:var(--olive);">
-          <i class="fa-solid fa-seedling"></i>
-          Это инвестиция, которая окупится на протяжении всей его профессиональной карьеры.
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- COMPARE TABLE -->
-<section class="compare-section">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-eyebrow"><i class="fa-solid fa-table-columns"></i> Сравнение</div>
-      <h2>Что входит в каждый пакет?</h2>
-    </div>
-    <div style="overflow-x:auto;" class="reveal">
-      <table class="compare-table">
-        <thead>
-          <tr>
-            <th>Что включено</th>
-            <th>Консультация<br><small>250 зл</small></th>
-            <th>Полная опека<br><small>1 800 зл</small></th>
-            <th>Групповой курс<br><small>1 000 зл</small></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Анализ темперамента и талантов</td><td><i class="fa-solid fa-check compare-check"></i></td><td><i class="fa-solid fa-check compare-check"></i></td><td><i class="fa-solid fa-check compare-check"></i></td></tr>
-          <tr><td>Подбор направлений учебы/школы</td><td><i class="fa-solid fa-check compare-check"></i></td><td><i class="fa-solid fa-check compare-check"></i></td><td><i class="fa-solid fa-check compare-check"></i></td></tr>
-          <tr><td>Письменный отчет</td><td><i class="fa-solid fa-check compare-check"></i></td><td><i class="fa-solid fa-check compare-check"></i></td><td><i class="fa-solid fa-xmark compare-cross"></i></td></tr>
-          <tr><td>Анализ оценок и шансов на поступление</td><td><i class="fa-solid fa-xmark compare-cross"></i></td><td><i class="fa-solid fa-check compare-check"></i></td><td><i class="fa-solid fa-xmark compare-cross"></i></td></tr>
-          <tr><td>Стратегия: репетиторы, волонтерство</td><td><i class="fa-solid fa-xmark compare-cross"></i></td><td><i class="fa-solid fa-check compare-check"></i></td><td><i class="fa-solid fa-xmark compare-cross"></i></td></tr>
-          <tr><td>Визиты в вузы/школы</td><td><i class="fa-solid fa-xmark compare-cross"></i></td><td><i class="fa-solid fa-check compare-check"></i> (3 визита)</td><td><i class="fa-solid fa-xmark compare-cross"></i></td></tr>
-          <tr><td>Заполнение документов</td><td><i class="fa-solid fa-xmark compare-cross"></i></td><td><i class="fa-solid fa-check compare-check"></i></td><td><i class="fa-solid fa-xmark compare-cross"></i></td></tr>
-          <tr><td>Работа в группе сверстников</td><td><i class="fa-solid fa-xmark compare-cross"></i></td><td><i class="fa-solid fa-xmark compare-cross"></i></td><td><i class="fa-solid fa-check compare-check"></i></td></tr>
-          <tr><td>Встречи с профессионалами</td><td><i class="fa-solid fa-xmark compare-cross"></i></td><td><i class="fa-solid fa-xmark compare-cross"></i></td><td><i class="fa-solid fa-check compare-check"></i></td></tr>
-          <tr><td>Портфолио и план карьеры</td><td><i class="fa-solid fa-xmark compare-cross"></i></td><td><i class="fa-solid fa-check compare-check"></i></td><td><i class="fa-solid fa-check compare-check"></i></td></tr>
-          <tr><td>Количество встреч</td><td>1</td><td>по мере необходимости</td><td>16</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div style="text-align:center; margin-top:48px;" class="reveal">
-      <a href="kontakt.html#cal" class="btn-main btn-main--large">
-        <i class="fa-solid fa-calendar-check"></i>
-        Хочу бесплатную 15-минутную консультацию
-      </a>
-      <div class="invest-note" style="justify-content:center; margin-top:16px;">
-        <i class="fa-solid fa-seedling"></i>
-        Это инвестиция, которая окупится на протяжении всей его профессиональной карьеры.
+      <div class="footer-links"><strong>Страницы</strong><a href="index.html">Главная</a><a
+          href="uslugi.html">Услуги</a><a href="o-mnie.html">Обо мне</a><a href="opinie.html">Отзывы</a><a
+          href="kontakt.html">Контакт</a></div>
+      <div class="footer-links"><strong>Контакт</strong><a href="https://t.me/VeronicaSubota" target="_blank"><i
+            class="fa-brands fa-telegram"></i> Telegram</a><a href="https://www.instagram.com/veronicasubota" target="_blank"><i class="fa-brands fa-instagram"></i>
+          Instagram</a>
+        <div style="margin-top:12px;"><a href="/pl/uslugi.html" class="lang-pill active-lang">PL</a><a
+            href="/ru/uslugi.html" class="lang-pill">RU</a></div>
       </div>
     </div>
-  </div>
-</section>
+    <div class="footer-bottom">
+      <p>© 2026 Вероника · Карьерный консультант · Польша 🧡</p>
+    </div>
+  </footer>
 
-<section class="tg-section"><div class="container tg-inner"><div><h3>Есть вопрос? Просто напишите</h3><p>Я отвечаю лично, быстро и по-человечески — без скриптов 🙂</p></div><a href="https://t.me/veronika_profile" class="btn-tg" target="_blank"><i class="fa-brands fa-telegram"></i>Написать Веронике</a></div></section>
-
-<footer><div class="container footer-inner"><div class="footer-brand"><a href="index.html" class="nav-logo" style="display:block;margin-bottom:12px;">Weroni<span>ka</span></a><p>Карьерный консультант и преподаватель.</p><div class="footer-socials"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="https://t.me/veronika_profile"><i class="fa-brands fa-telegram"></i></a></div></div><div class="footer-links"><strong>Страницы</strong><a href="index.html">Главная</a><a href="uslugi.html">Услуги</a><a href="o-mnie.html">Обо мне</a><a href="opinie.html">Отзывы</a><a href="kontakt.html">Контакт</a></div><div class="footer-links"><strong>Контакт</strong><a href="https://t.me/veronika_profile"><i class="fa-brands fa-telegram"></i> Telegram</a><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a><div style="margin-top:12px;"><a href="/pl/uslugi.html" class="lang-pill active-lang">PL</a><a href="/ru/uslugi.html" class="lang-pill">RU</a></div></div></div><div class="footer-bottom"><p>© 2026 Вероника · Карьерный консультант · Польша 🧡</p></div></footer>
-
-<script src="../js/main.js"></script>
-<script src="../js/base.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/base.js"></script>
 </body>
+
 </html>
