@@ -166,19 +166,6 @@ h4 {
   font-size: 0.85rem;
 }
 
-.lang-btn {
-  font-weight: 700;
-  color: var(--muted);
-  padding: 4px 8px;
-  border-radius: 8px;
-  transition: var(--trans);
-}
-
-.lang-btn.active-lang {
-  color: var(--terra-dark);
-  background: var(--terra-pale);
-}
-
 .nav-cta {
   background: var(--terra-dark);
   color: white !important;
@@ -1447,24 +1434,6 @@ footer {
   color: var(--terra-light);
 }
 
-.lang-pill {
-  display: inline-block;
-  padding: 4px 10px;
-  border-radius: 8px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  margin-right: 6px;
-  transition: var(--trans);
-}
-
-.lang-pill.active-lang {
-  color: var(--terra-light);
-  border-color: var(--terra-dark);
-  background: rgba(208, 98, 36, 0.15);
-}
-
 .footer-bottom {
   margin-top: 48px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -2192,13 +2161,9 @@ section {
 .sticky-cta {
   position: fixed;
   bottom: 0;
-  left: 0;
-  right: 0;
-  background: var(--terra-dark);
-  padding: 12px 16px;
-  z-index: 100;
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
-  display: none;
+  width: 100%;
+  background: #000;
+  z-index: 999;
 }
 
 @media (max-width: 768px) {
@@ -2216,10 +2181,9 @@ section {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: var(--terra-dark);
+  background: var(--chile-dark);
   color: white;
   padding: 14px 20px;
-  border-radius: 12px;
   font-weight: 700;
   font-size: 0.95rem;
   transition: var(--trans);

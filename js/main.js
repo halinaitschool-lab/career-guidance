@@ -92,15 +92,3 @@ const getLanguageInfo = () => {
 };
 
 const { currentLang, currentPage, baseUrl } = getLanguageInfo();
-
-// Update language button links
-document.querySelectorAll('.lang-btn').forEach(langBtn => {
-  const targetLang = langBtn.textContent.trim().toLowerCase(); // 'pl' or 'ru'
-  langBtn.href = `${baseUrl}${targetLang}/${currentPage}`;
-  
-  if (targetLang === currentLang) {
-    langBtn.classList.add('active-lang');
-  } else {
-    langBtn.classList.remove('active-lang');
-  }
-});
