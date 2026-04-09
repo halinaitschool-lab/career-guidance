@@ -933,7 +933,7 @@ h4 {
 @media (min-width: 900px) {
   .checklist-layout {
     grid-template-columns: 1fr 1fr;
-    align-items: start;
+    align-items: center;
   }
 }
 
@@ -2652,14 +2652,25 @@ section {
 }
 
 /* ── PROMISE SECTION ── */
-.promise-grid {
+.promise-grid, .client-grid {
   display: grid;
   gap: 20px;
+}
+
+.client-grid-lead {
+  font-size: 1.2rem;
+  color: var(--terra-pale);
+  margin-bottom: 32px;
+
 }
 
 @media (min-width: 768px) {
   .promise-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .client-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
