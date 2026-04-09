@@ -91,20 +91,27 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 reveals.forEach(el => revealObserver.observe(el));
 
-// ── Sticky CTA button visibility ──
+// ── Sticky CTA on desktop: show after scrolling past first hero / page header ──
 const stickyCta = document.querySelector('.sticky-cta');
-const howProcessSection = document.querySelector('.how-process-section');
-if (stickyCta && howProcessSection) {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        stickyCta.style.display = 'flex';
-      } else if (e.boundingClientRect.top > 0) {
-        stickyCta.style.display = 'none';
-      }
-    });
-  }, { threshold: 0.01 });
-  observer.observe(howProcessSection);
+const stickySentinel =
+  document.querySelector('.hero') ||
+  document.querySelector('.page-header') ||
+  document.getElementById('navbar')?.nextElementSibling;
+
+if (stickyCta && stickySentinel) {
+  const DESKTOP_MIN = 769;
+  const syncStickyCtaDesktop = () => {
+    if (window.innerWidth < DESKTOP_MIN) {
+      stickyCta.classList.remove('sticky-cta--desktop-visible');
+      return;
+    }
+    const rect = stickySentinel.getBoundingClientRect();
+    stickyCta.classList.toggle('sticky-cta--desktop-visible', rect.bottom <= 0);
+  };
+
+  window.addEventListener('scroll', syncStickyCtaDesktop, { passive: true });
+  window.addEventListener('resize', syncStickyCtaDesktop);
+  syncStickyCtaDesktop();
 }
 
 // ── Trust strip auto-scroll ──

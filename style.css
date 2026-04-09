@@ -1135,7 +1135,7 @@ h4 {
   padding: 36px;
   border: 2px solid rgba(208, 98, 36, 0.1);
   position: relative;
-  /* overflow: hidden; */
+  overflow-x: hidden;
   transition: var(--trans);
 }
 
@@ -1564,6 +1564,7 @@ footer {
   padding: 40px;
   border: 2px solid rgba(208, 98, 36, 0.1);
   position: relative;
+  overflow-x: hidden;
   transition: var(--trans);
 }
 
@@ -2392,6 +2393,8 @@ section {
 
 .u-overflow-x-auto {
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
 }
 
 .u-maxw-680 {
@@ -2487,9 +2490,11 @@ section {
   border-radius: var(--radius-sm);
 }
 
-/* Sticky CTA Button for Mobile */
+/* Sticky CTA: mobile always; desktop after first block (see .sticky-cta--desktop-visible + main.js) */
 .sticky-cta {
   position: fixed;
+  left: 0;
+  right: 0;
   bottom: 0;
   width: 100%;
   background: #000;
@@ -2497,6 +2502,8 @@ section {
   display: none;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.12);
 }
 
 @media (max-width: 768px) {
@@ -2507,6 +2514,16 @@ section {
   /* Make room for the fixed bottom CTA without adding page whitespace under footer */
   footer {
     padding-bottom: 80px;
+  }
+}
+
+@media (min-width: 769px) {
+  .sticky-cta.sticky-cta--desktop-visible {
+    display: flex;
+  }
+
+  body:has(.sticky-cta.sticky-cta--desktop-visible) footer {
+    padding-bottom: 72px;
   }
 }
 
