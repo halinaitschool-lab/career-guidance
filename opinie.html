@@ -18,8 +18,11 @@
 
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">Veroni<span>ca</span></a>
-      <button class="burger" id="burger"><span></span><span></span><span></span></button>
+      <div class="nav-logo">
+        <img src="./images/logo.png" alt="Логотип Вероника" class="nav-logo-img">
+        <a href="index.html" class="nav-logo-text">Veroni<span>ca</span></a>
+      </div>
+      <button class="burger" id="burger" aria-label="menu" aria-controls="nav-links" aria-expanded="false"><span></span><span></span><span></span></button>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Главная</a></li>
         <li><a href="uslugi.html">Услуги</a></li>
@@ -159,8 +162,7 @@
   <section class="ig-cta">
     <div class="container">
       <div class="reveal">
-        <i class="fa-brands fa-instagram"
-          style="font-size:3rem; background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); -webkit-background-clip:text; -webkit-text-fill-color:transparent; display:block; margin-bottom:16px;"></i>
+        <i class="fa-brands fa-instagram ig-cta-icon"></i>
         <h3>Больше отзывов и полезной информации</h3>
         <p>Присоединитесь к моему Instagram — там я делюсь советами, историями клиентов и повседневной работой
           карьерного консультанта.</p>
@@ -176,7 +178,7 @@
   <section class="final-cta">
     <div class="final-cta-bg"></div>
     <div class="final-cta-overlay"></div>
-    <div class="container" style="position:relative;z-index:2;">
+    <div class="container u-pos-rel u-z-2">
       <div class="final-cta-content reveal">
         <i class="fa-solid fa-calendar-check final-cta-icon"></i>
         <h2>Готовы на первый разговор?</h2>
@@ -201,8 +203,7 @@
   </section>
   <footer>
     <div class="container footer-inner">
-      <div class="footer-brand"><a href="index.html" class="nav-logo"
-          style="display:block;margin-bottom:12px;">Veroni<span>ka</span></a>
+      <div class="footer-brand"><a href="index.html" class="nav-logo u-block u-mb-12">Veroni<span>ka</span></a>
         <p>Карьерный консультант и преподаватель.</p>
         <div class="footer-socials"><a href="https://www.instagram.com/veronicasubota" target="_blank"><i class="fa-brands fa-instagram"></i></a><a
             href="https://t.me/VeronicaSubota" target="_blank"><i class="fa-brands fa-telegram"></i></a></div>

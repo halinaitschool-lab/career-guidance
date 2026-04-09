@@ -18,8 +18,11 @@
 
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">Veroni<span>ca</span></a>
-      <button class="burger" id="burger"><span></span><span></span><span></span></button>
+      <div class="nav-logo">
+        <img src="./images/logo.png" alt="Логотип Вероника" class="nav-logo-img">
+        <a href="index.html" class="nav-logo-text">Veroni<span>ca</span></a>
+      </div>
+      <button class="burger" id="burger" aria-label="menu" aria-controls="nav-links" aria-expanded="false"><span></span><span></span><span></span></button>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Главная</a></li>
         <li><a href="uslugi.html">Услуги</a></li>
@@ -171,94 +174,70 @@
   </section>
 
   <!-- HOW PROCESS GOES -->
-  <section style="background:white; padding:96px 0;">
+  <section class="section--white section--py-96">
     <div class="container">
       <div class="section-header reveal">
         <div class="section-eyebrow"><i class="fa-solid fa-route"></i> Как выглядит работа со мной</div>
         <h2>Шаг за шагом</h2>
       </div>
-      <div style="max-width:680px; margin:0 auto;">
-        <div style="display:flex; flex-direction:column; gap:0; position:relative;">
+      <div class="process-steps">
+        <div class="process-steps-inner">
 
-          <div style="display:flex; gap:20px; align-items:flex-start; padding-bottom:36px; position:relative;">
-            <div style="display:flex; flex-direction:column; align-items:center; gap:0; flex-shrink:0;">
-              <div
-                style="width:48px; height:48px; border-radius:50%; background:var(--terra-pale); border:2px solid var(--terra-dark); display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:1.3rem; font-weight:700; color:var(--terra-dark);">
-                1</div>
-              <div
-                style="width:2px; flex:1; background:linear-gradient(to bottom, var(--terra-dark), var(--terra-pale)); min-height:40px; margin-top:4px;">
-              </div>
+          <div class="process-step">
+            <div class="process-step-marker">
+              <div class="process-step-num">1</div>
+              <div class="process-step-line"></div>
             </div>
-            <div class="reveal" style="padding-top:8px;">
-              <h4 style="font-size:1.3rem; color:var(--dark); margin-bottom:8px;">сначала мы встречаемся с родителем и
-                ребёнком</h4>
-              <p style="color:var(--muted); font-size:0.95rem; line-height:1.75;">— обсуждаем ситуацию и запрос</p>
+            <div class="process-step-content reveal">
+              <h4 class="process-step-title">сначала мы встречаемся с родителем и ребёнком</h4>
+              <p class="process-step-desc">— обсуждаем ситуацию и запрос</p>
             </div>
           </div>
 
-          <div style="display:flex; gap:20px; align-items:flex-start; padding-bottom:36px; position:relative;">
-            <div style="display:flex; flex-direction:column; align-items:center; gap:0; flex-shrink:0;">
-              <div
-                style="width:48px; height:48px; border-radius:50%; background:var(--terra-pale); border:2px solid var(--terra-dark); display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:1.3rem; font-weight:700; color:var(--terra-dark);">
-                2</div>
-              <div
-                style="width:2px; flex:1; background:linear-gradient(to bottom, var(--terra-dark), var(--terra-pale)); min-height:40px; margin-top:4px;">
-              </div>
+          <div class="process-step">
+            <div class="process-step-marker">
+              <div class="process-step-num">2</div>
+              <div class="process-step-line"></div>
             </div>
-            <div class="reveal reveal-d1" style="padding-top:8px;">
-              <h4 style="font-size:1.3rem; color:var(--dark); margin-bottom:8px;">затем я даю индивидуальные задания
-              </h4>
-              <p style="color:var(--muted); font-size:0.95rem; line-height:1.75;">под конкретного ребёнка, а не «один
-                шаблон для всех»</p>
+            <div class="process-step-content reveal reveal-d1">
+              <h4 class="process-step-title">затем я даю индивидуальные задания</h4>
+              <p class="process-step-desc">под конкретного ребёнка, а не «один шаблон для всех»</p>
             </div>
           </div>
 
-          <div style="display:flex; gap:20px; align-items:flex-start; padding-bottom:36px; position:relative;">
-            <div style="display:flex; flex-direction:column; align-items:center; gap:0; flex-shrink:0;">
-              <div
-                style="width:48px; height:48px; border-radius:50%; background:var(--terra-pale); border:2px solid var(--terra-dark); display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:1.3rem; font-weight:700; color:var(--terra-dark);">
-                3</div>
-              <div
-                style="width:2px; flex:1; background:linear-gradient(to bottom, var(--terra-dark), var(--terra-pale)); min-height:40px; margin-top:4px;">
-              </div>
+          <div class="process-step">
+            <div class="process-step-marker">
+              <div class="process-step-num">3</div>
+              <div class="process-step-line"></div>
             </div>
-            <div class="reveal reveal-d2" style="padding-top:8px;">
-              <h4 style="font-size:1.3rem; color:var(--dark); margin-bottom:8px;">провожу глубокое интервью</h4>
-              <p style="color:var(--muted); font-size:0.95rem; line-height:1.75;">1–2 часа живого разговора, задаю
-                глубокие вопросы, много базируюсь на результатах индивидуального задания</p>
+            <div class="process-step-content reveal reveal-d2">
+              <h4 class="process-step-title">провожу глубокое интервью</h4>
+              <p class="process-step-desc">1–2 часа живого разговора, задаю глубокие вопросы, много базируюсь на результатах индивидуального задания</p>
             </div>
           </div>
 
-          <div style="display:flex; gap:20px; align-items:flex-start; padding-bottom:36px; position:relative;">
-            <div style="display:flex; flex-direction:column; align-items:center; gap:0; flex-shrink:0;">
-              <div
-                style="width:48px; height:48px; border-radius:50%; background:var(--terra-pale); border:2px solid var(--terra-dark); display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:1.3rem; font-weight:700; color:var(--terra-dark);">
-                4</div>
-              <div
-                style="width:2px; flex:1; background:linear-gradient(to bottom, var(--terra-dark), var(--terra-pale)); min-height:40px; margin-top:4px;">
-              </div>
+          <div class="process-step">
+            <div class="process-step-marker">
+              <div class="process-step-num">4</div>
+              <div class="process-step-line"></div>
             </div>
-            <div class="reveal reveal-d3" style="padding-top:8px;">
-              <h4 style="font-size:1.3rem; color:var(--dark); margin-bottom:8px;">анализирую всё и собираю полную
-                картину</h4>
-              <p style="color:var(--muted); font-size:0.95rem; line-height:1.75;">учитываю: здоровье, легализацию,
-                ограничения</p>
+            <div class="process-step-content reveal reveal-d3">
+              <h4 class="process-step-title">анализирую всё и собираю полную картину</h4>
+              <p class="process-step-desc">учитываю: здоровье, легализацию, ограничения</p>
             </div>
           </div>
 
-          <div style="display:flex; gap:20px; align-items:flex-start;" class="reveal">
-            <div
-              style="width:48px; height:48px; border-radius:50%; background:var(--terra-dark); display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0;">
-              🎉</div>
-            <div style="padding-top:8px;">
-              <h4 style="font-size:1.3rem; color:var(--dark); margin-bottom:8px;">В результате вы получаете:</h4>
-              <ul style="color:var(--muted); font-size:0.95rem; line-height:1.75;">
-                <li style="color:var(--muted); font-size:0.95rem; line-height:1.75;">понятный портрет ребёнка (сильные
-                  стороны, риски, склонности)</li>
-                <li style="color:var(--muted); font-size:0.95rem; line-height:1.75;">конкретные направления, которые ему
-                  подходят</li>
-                <li style="color:var(--muted); font-size:0.95rem; line-height:1.75;">реальные варианты: куда поступать,
-                  что учитывать, в чём разница</li>
+          <div class="process-step process-step--result reveal">
+            <div class="process-step-marker">
+              <div class="process-step-num">🎉</div>
+              <div class="process-step-line"></div>
+            </div>
+            <div class="process-step-content">
+              <h4 class="process-step-title">В результате вы получаете:</h4>
+              <ul class="process-result-list">
+                <li>понятный портрет ребёнка (сильные стороны, риски, склонности)</li>
+                <li>конкретные направления, которые ему подходят</li>
+                <li>реальные варианты: куда поступать, что учитывать, в чём разница</li>
               </ul>
             </div>
           </div>
@@ -269,13 +248,13 @@
   </section>
 
   <!-- WHAT YOU GET -->
-  <section style="background:var(--dark); padding:96px 0;">
+  <section class="section--dark section--py-96">
     <div class="container">
       <div class="section-header reveal">
-        <div class="section-eyebrow" style="color:var(--sunset-light);">
+        <div class="section-eyebrow section-eyebrow--light">
           <i class="fa-solid fa-arrows-rotate"></i> Трансформация
         </div>
-        <h2 style="color:white;">Что меняется после работы</h2>
+        <h2 class="h2--light">Что меняется после работы</h2>
       </div>
 
       <div class="promise-grid">
@@ -304,7 +283,7 @@
         </div>
       </div>
 
-      <div style="text-align:center; margin-top:48px;" class="reveal">
+      <div class="reveal u-text-center u-mt-48">
         <a href="kontakt.html#cal" class="btn-main btn-main--large">
           <i class="fa-solid fa-calendar-check"></i>
           Хочу консультацию
@@ -324,8 +303,7 @@
   </section>
   <footer>
     <div class="container footer-inner">
-      <div class="footer-brand"><a href="index.html" class="nav-logo"
-          style="display:block;margin-bottom:12px;">Veroni<span>ka</span></a>
+      <div class="footer-brand"><a href="index.html" class="nav-logo u-block u-mb-12">Veroni<span>ka</span></a>
         <p>Карьерный консультант и преподаватель.</p>
         <div class="footer-socials"><a href="https://www.instagram.com/veronicasubota" target="_blank"><i class="fa-brands fa-instagram"></i></a><a
             href="https://t.me/VeronicaSubota" target="_blank"><i class="fa-brands fa-telegram"></i></a></div>

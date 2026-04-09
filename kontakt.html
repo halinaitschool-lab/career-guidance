@@ -32,8 +32,11 @@
 
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">Veroni<span>ca</span></a>
-      <button class="burger" id="burger"><span></span><span></span><span></span></button>
+      <div class="nav-logo">
+        <img src="./images/logo.png" alt="Логотип Вероника" class="nav-logo-img">
+        <a href="index.html" class="nav-logo-text">Veroni<span>ca</span></a>
+      </div>
+      <button class="burger" id="burger" aria-label="menu" aria-controls="nav-links" aria-expanded="false"><span></span><span></span><span></span></button>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Главная</a></li>
         <li><a href="uslugi.html">Услуги</a></li>
@@ -90,16 +93,14 @@
             </div>
           </div>
 
-          <div
-            style="background:var(--terra-pale); border-radius:var(--radius); padding:24px; border-left:3px solid var(--terra-dark);">
-            <h4 style="font-size:1.1rem; color:var(--dark); margin-bottom:10px;"><i class="fa-solid fa-clock"
-                style="margin-right:8px; color:var(--terra-dark);"></i>Как выглядит бесплатная консультация?</h4>
-            <p style="font-size:0.9rem; color:var(--muted); line-height:1.75;">15 минут. Вы рассказываете мне о ситуации
+          <div class="contact-callout">
+            <h4><i class="fa-solid fa-clock u-mr-8 u-text-terra"></i>Как выглядит бесплатная консультация?</h4>
+            <p>15 минут. Вы рассказываете мне о ситуации
               — я слушаю и задаю несколько вопросов. В конце вы знаете, смогу ли я помочь. Ноль давления, ноль
               обязательств.</p>
           </div>
 
-          <div class="invest-note" style="margin-top:24px; color:var(--terra-dark);">
+          <div class="invest-note invest-note--terra u-mt-24">
             <i class="fa-solid fa-seedling"></i>
             Это инвестиция, которая окупится на протяжении всей его профессиональной карьеры.
           </div>
@@ -108,14 +109,13 @@
         <!-- Right: Calendar -->
         <div class="reveal reveal-d1">
           <div class="cal-widget">
-            <h3><i class="fa-solid fa-calendar-check" style="color:var(--terra-dark); margin-right:10px;"></i>Хочу
+            <h3><i class="fa-solid fa-calendar-check u-text-terra u-mr-10"></i>Хочу
               бесплатную консультацию</h3>
             <p>Выберите удобное для вас время — 15 минут, онлайн</p>
             <!-- Cal.com embed -->
-            <div style="width:100%;height:100%;overflow:scroll; border-radius:var(--radius-sm); overflow:hidden;"
-              id="my-cal-inline-60min"></div>
+            <div class="cal-embed-wrap" id="my-cal-inline-60min"></div>
             <p class="cal-placeholder-note">
-              <i class="fa-solid fa-lock" style="color:var(--olive);"></i>
+              <i class="fa-solid fa-lock u-text-olive"></i>
               Ваши данные в безопасности. Ноль спама — обещаю.
             </p>
           </div>
@@ -126,14 +126,14 @@
   </section>
 
   <!-- FAQ -->
-  <section style="background:var(--cream); padding:80px 0;">
+  <section class="section--cream section--py-80">
     <div class="container">
       <div class="section-header reveal">
         <div class="section-eyebrow"><i class="fa-solid fa-circle-question"></i> Часто задаваемые вопросы</div>
         <h2>Самые популярные вопросы</h2>
       </div>
-      <div style="max-width:680px; margin:0 auto; display:flex; flex-direction:column; gap:16px;">
-        <div class="diff-card reveal" style="cursor:pointer;">
+      <div class="u-maxw-680 u-mx-auto u-flex-col u-gap-16">
+        <div class="diff-card reveal u-cursor-pointer">
           <h4>Сессии проходят онлайн или офлайн?</h4>
           <p>Я предлагаю оба формата — можем встретиться онлайн (Google Meet, Zoom) или офлайн в Польше. Выбирайте, что
             вам удобнее.</p>
@@ -167,8 +167,7 @@
   </section>
   <footer>
     <div class="container footer-inner">
-      <div class="footer-brand"><a href="index.html" class="nav-logo"
-          style="display:block;margin-bottom:12px;">Veroni<span>ka</span></a>
+      <div class="footer-brand"><a href="index.html" class="nav-logo u-block u-mb-12">Veroni<span>ka</span></a>
         <p>Карьерный консультант и преподаватель.</p>
         <div class="footer-socials"><a href="https://www.instagram.com/veronicasubota" target="_blank"><i
               class="fa-brands fa-instagram"></i></a><a href="https://t.me/VeronicaSubota" target="_blank"><i

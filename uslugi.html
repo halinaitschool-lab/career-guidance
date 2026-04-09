@@ -19,8 +19,11 @@
   <!-- NAV -->
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">Veroni<span>ca</span></a>
-      <button class="burger" id="burger"><span></span><span></span><span></span></button>
+      <div class="nav-logo">
+        <img src="./images/logo.png" alt="Логотип Вероника" class="nav-logo-img">
+        <a href="index.html" class="nav-logo-text">Veroni<span>ca</span></a>
+      </div>
+      <button class="burger" id="burger" aria-label="menu" aria-controls="nav-links" aria-expanded="false"><span></span><span></span><span></span></button>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Главная</a></li>
         <li><a href="uslugi.html" class="active">Услуги</a></li>
@@ -43,7 +46,7 @@
   </div>
 
   <!-- HOW TO CHOOSE -->
-  <section style="background:white; padding: 80px 0;">
+  <section class="section--white section--py-80">
     <div class="container">
       <div class="section-header reveal">
         <div class="section-eyebrow"><i class="fa-solid fa-compass"></i> Для кого что?</div>
@@ -57,12 +60,12 @@
           <div class="service-num">01</div>
           <div class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
           <h3>Идеально, если...</h3>
-          <p><ul><li>
-            вы не хотите тянуть время</li>
-          <li>вам нужно быстрое, но точное понимание</li>
-          <li>и вы чувствуете: «что-то нужно сдвинуть»</li>
-          </ul></p>
-          <div style="font-size:0.85rem; font-weight:700; color:var(--terra-dark); margin-top:16px;">→ Карьерное консультирование 550
+          <ul class="service-list">
+            <li>вы не хотите тянуть время</li>
+            <li>вам нужно быстрое, но точное понимание</li>
+            <li>и вы чувствуете: «что-то нужно сдвинуть»</li>
+          </ul>
+          <div class="u-mt-16 services-hint services-hint--terra">→ Карьерное консультирование 550
             зл</div>
         </div>
         <div class="service-card service-card--featured reveal reveal-d1">
@@ -70,14 +73,12 @@
           <div class="service-num">02</div>
           <div class="service-icon"><i class="fa-solid fa-map-location-dot"></i></div>
           <h3>Формат для тех, кто:</h3>
-          <p>
-            <ul>
-              <li>хочет не ошибиться</li>
-              <li>хочет понимать реальные шансы</li>
-              <li>хочет план, а не «ощущение»</li>
-            </ul>
-          </p>
-          <div style="font-size:0.85rem; font-weight:700; color:var(--terra-dark); margin-top:16px;">→ Карьерная стратегия 700 зл</div>
+          <ul class="service-list">
+            <li>хочет не ошибиться</li>
+            <li>хочет понимать реальные шансы</li>
+            <li>хочет план, а не «ощущение»</li>
+          </ul>
+          <div class="u-mt-16 services-hint services-hint--terra">→ Карьерная стратегия 700 зл</div>
         </div>
         <div class="service-card reveal reveal-d2">
           <div class="service-num">03</div>
@@ -85,7 +86,7 @@
           <h3>Здесь происходит то,</h3>
           <p>что невозможно сделать один на один.
 Подростки начинают видеть себя через других.</p>
-          <div style="font-size:0.85rem; font-weight:700; color:var(--olive); margin-top:16px;">→ Групповой курс 600
+          <div class="u-mt-16 services-hint services-hint--olive">→ Групповой курс 600
             зл</div>
         </div>
       </div>
@@ -108,7 +109,7 @@
           <div class="pkg-price">550 зл</div>
           <div class="pkg-note">Одноразовое встреча · ~90 минут · онлайн или офлайн</div>
           <div class="pkg-quote">
-            <i class="fa-solid fa-quote-left" style="margin-right:6px; font-size:0.8rem;"></i>
+            <i class="fa-solid fa-quote-left"></i>
             «Одной сессии было достаточно, что-то щелкнуло.c
           </div>
           <p class="pkg-desc">Ваш ребенок выходит из сессии с конкретным направлением и осознанием своих сильных сторон.
@@ -122,7 +123,7 @@
             <li>Краткий письменный отчет после сессии (PDF)</li>
           </ul>
           <a href="kontakt.html#cal" class="pkg-btn">Хочу первую встречу →</a>
-          <div class="invest-note" style="margin-top:16px;">
+          <div class="invest-note u-mt-16">
             <i class="fa-solid fa-seedling"></i>
             Это инвестиция, которая окупится на протяжении всей его профессиональной карьеры.
           </div>
@@ -136,7 +137,7 @@
           <div class="pkg-price">700 зл</div>
           <div class="pkg-note">Под ключ · от «не знаю» до выбора направления</div>
           <div class="pkg-quote">
-            <i class="fa-solid fa-quote-left" style="margin-right:6px; font-size:0.8rem;"></i>
+            <i class="fa-solid fa-quote-left"></i>
             «Не знаю, как-то критично смотрю на ее желание стать программисткой...» — именно здесь вместе мы это
             проверим и найдем уверенный ответ.
           </div>
@@ -155,7 +156,7 @@
             <li>Полный письменный отчет после сессии (PDF)</li>
           </ul>
           <a href="kontakt.html#cal" class="pkg-btn">Хочу полную опеку →</a>
-          <div class="invest-note" style="margin-top:16px;">
+          <div class="invest-note u-mt-16">
             <i class="fa-solid fa-seedling"></i>
             Это инвестиция, которая окупится на протяжении всей его профессиональной карьеры.
           </div>
@@ -167,9 +168,8 @@
           <div class="pkg-name">Идентификация профиля</div>
           <div class="pkg-price">600 зл</div>
           <div class="pkg-note">4 встречи · полный курс · 6-8 человек</div>
-          <div class="pkg-quote"
-            style="background:var(--olive-pale); border-left-color:var(--olive); color:var(--olive);">
-            <i class="fa-solid fa-quote-left" style="margin-right:6px; font-size:0.8rem;"></i>
+          <div class="pkg-quote pkg-quote--olive">
+            <i class="fa-solid fa-quote-left"></i>
             «Чувствовать себя увереннее и действовать более осознанно» — именно это дает групповой курс.
           </div>
           <p class="pkg-desc">Ребенок не просто узнает себя — пробует, играет, встречает реальных представителей
@@ -181,8 +181,8 @@
             <li>Примерка ролей: игры, групповые проекты, посещение профессиональной среды</li>
             <li>Вектор карьеры: портфолио, пошаговый план развития, презентация перед группой</li>
           </ul>
-          <a href="kontakt.html#cal" class="pkg-btn" style="background:var(--olive);">Запишите ребенка в группу →</a>
-          <div class="invest-note" style="margin-top:16px; color:var(--olive);">
+          <a href="kontakt.html#cal" class="pkg-btn pkg-btn--olive">Запишите ребенка в группу →</a>
+          <div class="invest-note invest-note--olive u-mt-16">
             <i class="fa-solid fa-seedling"></i>
             Это инвестиция, которая окупится на протяжении всей его профессиональной карьеры.
           </div>
@@ -193,14 +193,14 @@
   </section>
 
   <!-- RESULT BLOCK -->
-<section style="background:#f9f7f4; padding:100px 0;">
+<section class="section--soft section--py-100">
   <div class="container">
     <div class="section-header reveal">
       <div class="section-eyebrow"><i class="fa-solid fa-table-columns"></i> Результат</div>
       <h2>Что вы получаете в результате</h2>
     </div>
 
-    <div class="packages-grid" style="margin-top:40px;">
+    <div class="packages-grid u-mt-40">
 
       <div class="package-card-full">
         <ul class="pkg-list">
@@ -239,7 +239,7 @@
         <div class="section-eyebrow"><i class="fa-solid fa-table-columns"></i> Сравнение</div>
         <h2>Что входит в каждый пакет?</h2>
       </div>
-      <div style="overflow-x:auto;" class="reveal">
+      <div class="reveal u-overflow-x-auto">
         <table class="compare-table">
           <thead>
             <tr>
@@ -329,12 +329,12 @@
           </tbody>
         </table>
       </div>
-      <div style="text-align:center; margin-top:48px;" class="reveal">
+      <div class="reveal u-text-center u-mt-48">
         <a href="kontakt.html#cal" class="btn-main btn-main--large">
           <i class="fa-solid fa-calendar-check"></i>
           Хочу бесплатную 15-минутную консультацию
         </a>
-        <div class="invest-note" style="justify-content:center; margin-top:16px;">
+        <div class="invest-note u-mt-16">
           <i class="fa-solid fa-seedling"></i>
           Это инвестиция, которая окупится на протяжении всей его профессиональной карьеры.
         </div>
@@ -354,8 +354,7 @@
 
   <footer>
     <div class="container footer-inner">
-      <div class="footer-brand"><a href="index.html" class="nav-logo"
-          style="display:block;margin-bottom:12px;">Veroni<span>ka</span></a>
+      <div class="footer-brand"><a href="index.html" class="nav-logo u-block u-mb-12">Veroni<span>ka</span></a>
         <p>Карьерный консультант и преподаватель.</p>
         <div class="footer-socials"><a href="https://www.instagram.com/veronicasubota" target="_blank"><i
               class="fa-brands fa-instagram"></i></a><a href="https://t.me/VeronicaSubota" target="_blank"><i

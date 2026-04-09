@@ -14,18 +14,57 @@ if (navbar) {
 const burger = document.getElementById('burger');
 const navLinks = document.getElementById('nav-links');
 if (burger && navLinks) {
-  burger.addEventListener('click', () => {
-    burger.classList.toggle('open');
-    navLinks.classList.toggle('open');
-    document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
-  });
-  navLinks.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      burger.classList.remove('open');
-      navLinks.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-  });
+  const CLOSE_MENU_EVENTS = ['resize', 'orientationchange'];
+  let lockedScrollY = 0;
+
+  const isOpen = () => navLinks.classList.contains('open');
+
+  const lockScroll = () => {
+    lockedScrollY = window.scrollY || window.pageYOffset || 0;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${lockedScrollY}px`;
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.width = '100%';
+  };
+
+  const unlockScroll = () => {
+    const y = lockedScrollY;
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.width = '';
+    lockedScrollY = 0;
+    window.scrollTo(0, y);
+  };
+
+  const openMenu = () => {
+    burger.classList.add('open');
+    navLinks.classList.add('open');
+    burger.setAttribute('aria-expanded', 'true');
+    lockScroll();
+  };
+
+  const closeMenu = () => {
+    if (!isOpen()) return;
+    burger.classList.remove('open');
+    navLinks.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    unlockScroll();
+  };
+
+  const toggleMenu = () => {
+    if (isOpen()) closeMenu();
+    else openMenu();
+  };
+
+  burger.setAttribute('aria-expanded', burger.getAttribute('aria-expanded') || 'false');
+  if (!burger.getAttribute('aria-controls')) burger.setAttribute('aria-controls', 'nav-links');
+
+  burger.addEventListener('click', toggleMenu);
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  CLOSE_MENU_EVENTS.forEach(evt => window.addEventListener(evt, closeMenu));
 }
 
 // ── Parallax ──
