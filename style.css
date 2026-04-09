@@ -1107,7 +1107,7 @@ h4 {
   padding: 36px;
   border: 2px solid rgba(208, 98, 36, 0.1);
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   transition: var(--trans);
 }
 
@@ -1123,7 +1123,7 @@ h4 {
 
 .service-featured-label {
   position: absolute;
-  top: 16px;
+  top: 4px;
   right: -24px;
   background: var(--terra-dark);
   color: white;
@@ -1132,7 +1132,8 @@ h4 {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 5px 36px;
-  transform: rotate(45deg);
+  transform: rotate(25deg);
+  border-radius: 6px;
 }
 
 .service-num {
@@ -1514,7 +1515,6 @@ footer {
   padding: 40px;
   border: 2px solid rgba(208, 98, 36, 0.1);
   position: relative;
-  overflow: hidden;
   transition: var(--trans);
 }
 
@@ -1534,7 +1534,7 @@ footer {
 
 .pkg-ribbon {
   position: absolute;
-  top: 18px;
+  top: 4px;
   right: -22px;
   background: var(--terra-dark);
   color: white;
@@ -1543,7 +1543,8 @@ footer {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 5px 36px;
-  transform: rotate(45deg);
+  transform: rotate(25deg);
+  border-radius: 6px;
 }
 
 .pkg-type {

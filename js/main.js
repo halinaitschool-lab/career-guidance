@@ -62,33 +62,3 @@ document.querySelectorAll('.nav-links a').forEach(a => {
     a.classList.remove('active');
   }
 });
-
-// ── Active language & dynamic language switching ──
-// Get current language and page, and detect environment
-const getLanguageInfo = () => {
-  const pathname = window.location.pathname;
-  const segments = pathname.split('/').filter(s => s); // Remove empty strings
-  
-  let currentLang = '';
-  let currentPage = 'index.html';
-  let baseUrl = '/';
-  let isProd = false;
-  
-  // Check if path includes 'career-guidance' (production on GitHub Pages)
-  if (segments.includes('career-guidance')) {
-    isProd = true;
-    const idx = segments.indexOf('career-guidance');
-    baseUrl = '/career-guidance/';
-    currentLang = segments[idx + 1] || '';
-    currentPage = segments[idx + 2] || 'index.html';
-  } else {
-    // Local development - still add career-guidance for consistency
-    baseUrl = '/career-guidance/';
-    currentLang = segments[0] || '';
-    currentPage = segments[1] || 'index.html';
-  }
-  
-  return { currentLang, currentPage, baseUrl };
-};
-
-const { currentLang, currentPage, baseUrl } = getLanguageInfo();
