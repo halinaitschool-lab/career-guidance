@@ -4,6 +4,7 @@
 ══════════════════════════════════ */
 
 :root {
+  --logo: #2f352b;
   --green-dark: #002519;
   --green: #014a31;
   --green-light: #008559;
@@ -124,14 +125,20 @@ h4 {
 }
 
 .nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-logo-text {
   font-family: var(--font-display);
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--terra-dark);
 }
 
-.nav-logo span {
-  color: var(--olive);
+.nav-logo-text span {
+  color: var(--logo);
 }
 
 .nav-links {
@@ -710,6 +717,7 @@ h4 {
   padding: 18px 24px;
   overflow-x: auto;
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
 .trust-strip::-webkit-scrollbar {
@@ -723,6 +731,7 @@ h4 {
   justify-content: center;
   min-width: max-content;
   margin: 0 auto;
+  transition: none;
 }
 
 .trust-item {
@@ -2165,11 +2174,14 @@ section {
   width: 100%;
   background: #000;
   z-index: 999;
+  display: none;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
   .sticky-cta {
-    display: block;
+    display: flex;
   }
 
   body {
@@ -2267,7 +2279,7 @@ section {
 /* ── HERO SECTION ── */
 .hero-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 56px;
   align-items: center;
 }
@@ -2285,7 +2297,7 @@ section {
   background: linear-gradient(145deg, var(--terra-dark) 0%, var(--chile-dark) 100%);
   background: linear-gradient(-145deg, #3A2010 0%, var(--chile-dark) 100%);
   background: rgba(255, 255, 255, 0.06);
-  background-image: url('./images/hero.png');
+  background-image: url('./images/hero1.png');
   background-size: cover;
   border: 2px solid var(--terra-light);
   position: relative;

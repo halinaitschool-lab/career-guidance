@@ -52,6 +52,42 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 reveals.forEach(el => revealObserver.observe(el));
 
+// ── Sticky CTA button visibility ──
+const stickyCta = document.querySelector('.sticky-cta');
+const howProcessSection = document.querySelector('.how-process-section');
+if (stickyCta && howProcessSection) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        stickyCta.style.display = 'flex';
+      } else if (e.boundingClientRect.top > 0) {
+        stickyCta.style.display = 'none';
+      }
+    });
+  }, { threshold: 0.01 });
+  observer.observe(howProcessSection);
+}
+
+// ── Trust strip auto-scroll ──
+const trustStrip = document.querySelector('.trust-strip');
+if (trustStrip) {
+  const trustInner = trustStrip.querySelector('.trust-inner');
+  if (trustInner) {
+    let scrollPos = 0;
+    const scrollSpeed = 1;
+    const scrollInterval = setInterval(() => {
+      scrollPos += scrollSpeed;
+      if (scrollPos >= trustInner.scrollWidth - trustInner.parentElement.clientWidth) {
+        scrollPos = 0;
+      }
+      trustInner.parentElement.scrollLeft = scrollPos;
+    }, 30);
+    
+    // Stop auto-scroll on hover
+    trustStrip.addEventListener('mouseenter', () => clearInterval(scrollInterval));
+  }
+}
+
 // ── Active nav link ──
 const currentPagePath = window.location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.nav-links a').forEach(a => {
