@@ -1055,6 +1055,17 @@ h4 {
   opacity: 0.92;
 }
 
+.checklist-result-box .btn-main {
+  width: 100%;
+  background-color: var(--terra);
+}
+
+.checklist-result-box .btn-main:hover {
+  background-color: var(--chile-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(174, 67, 30, 0.3);
+}
+
 .invest-note {
   display: flex;
   align-items: flex-start;
