@@ -62,7 +62,23 @@ if (burger && navLinks) {
   burger.setAttribute('aria-expanded', burger.getAttribute('aria-expanded') || 'false');
   if (!burger.getAttribute('aria-controls')) burger.setAttribute('aria-controls', 'nav-links');
 
-  burger.addEventListener('click', toggleMenu);
+  // Improve mobile touch reliability: handle touchend separately and ignore the following synthetic click.
+  let lastTouch = 0;
+  const handleTouchEnd = (e) => {
+    lastTouch = Date.now();
+    toggleMenu();
+    // prevent default to avoid generating an additional click in some browsers
+    if (e && typeof e.preventDefault === 'function') e.preventDefault();
+  };
+  const handleClick = (e) => {
+    // If a recent touchend occurred, ignore the synthetic click
+    if (Date.now() - lastTouch < 700) return;
+    toggleMenu();
+  };
+
+  burger.addEventListener('touchend', handleTouchEnd, { passive: false });
+  burger.addEventListener('click', handleClick);
+
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
   CLOSE_MENU_EVENTS.forEach(evt => window.addEventListener(evt, closeMenu));
 }
