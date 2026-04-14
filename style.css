@@ -1156,21 +1156,6 @@ h4 {
   box-shadow: 0 8px 40px rgba(174, 67, 30, 0.15);
 }
 
-.service-featured-label {
-  position: absolute;
-  top: 4px;
-  right: -24px;
-  background: var(--terra-dark);
-  color: white;
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 5px 36px;
-  transform: rotate(25deg);
-  border-radius: 6px;
-}
-
 .service-num {
   font-family: var(--font-display);
   font-size: 3rem;
@@ -1589,7 +1574,7 @@ footer {
   border-color: var(--olive);
 }
 
-.pkg-ribbon {
+.pkg-ribbon, .service-featured-label {
   position: absolute;
   top: 10px;
   right: -4px;
@@ -1600,7 +1585,6 @@ footer {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 5px 36px;
-  transform: rotate(25deg);
   border-radius: 6px;
 }
 
