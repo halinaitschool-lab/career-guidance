@@ -19,24 +19,20 @@ if (burger && navLinks) {
 
   const isOpen = () => navLinks.classList.contains('open');
 
+  // Simple scroll lock: hide body overflow and compensate scrollbar width to avoid layout shift.
   const lockScroll = () => {
     lockedScrollY = window.scrollY || window.pageYOffset || 0;
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${lockedScrollY}px`;
-    document.body.style.left = '0';
-    document.body.style.right = '0';
-    document.body.style.width = '100%';
+    const scrollbarWidth = Math.max(0, window.innerWidth - document.documentElement.clientWidth);
+    if (scrollbarWidth > 0) document.body.style.paddingRight = `${scrollbarWidth}px`;
+    document.body.style.overflow = 'hidden';
   };
 
   const unlockScroll = () => {
-    const y = lockedScrollY;
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.left = '';
-    document.body.style.right = '';
-    document.body.style.width = '';
+    document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
+    // restore scroll position if it changed
+    if (lockedScrollY) window.scrollTo(0, lockedScrollY);
     lockedScrollY = 0;
-    window.scrollTo(0, y);
   };
 
   const openMenu = () => {
@@ -62,23 +58,8 @@ if (burger && navLinks) {
   burger.setAttribute('aria-expanded', burger.getAttribute('aria-expanded') || 'false');
   if (!burger.getAttribute('aria-controls')) burger.setAttribute('aria-controls', 'nav-links');
 
-  // Improve mobile touch reliability: handle touchend separately and ignore the following synthetic click.
-  let lastTouch = 0;
-  const handleTouchEnd = (e) => {
-    lastTouch = Date.now();
-    toggleMenu();
-    // prevent default to avoid generating an additional click in some browsers
-    if (e && typeof e.preventDefault === 'function') e.preventDefault();
-  };
-  const handleClick = (e) => {
-    // If a recent touchend occurred, ignore the synthetic click
-    if (Date.now() - lastTouch < 700) return;
-    toggleMenu();
-  };
-
-  burger.addEventListener('touchend', handleTouchEnd, { passive: false });
-  burger.addEventListener('click', handleClick);
-
+  // Use a single click handler for reliability across mobile browsers. No touch-specific handlers.
+  burger.addEventListener('click', toggleMenu);
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
   CLOSE_MENU_EVENTS.forEach(evt => window.addEventListener(evt, closeMenu));
 }
