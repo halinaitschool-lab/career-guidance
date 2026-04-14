@@ -134,14 +134,14 @@ h4 {
   gap: 1rem;
 }
 
-.nav-logo-text {
+.nav-logo-text, .footer-brand .nav-logo {
   font-family: var(--font-display);
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--terra-dark);
 }
 
-.nav-logo-text span {
+.nav-logo-text span, .footer-brand .nav-logo span {
   color: var(--logo);
 }
 
